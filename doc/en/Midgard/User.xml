@@ -1,0 +1,87 @@
+<Type Name="User" FullName="Midgard.User">
+  <TypeSignature Language="C#" Value="public class User : GLib.Object" />
+  <AssemblyInfo>
+    <AssemblyName>midgard-sharp</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected User (GLib.GType gtype);" />
+      <MemberType>Constructor</MemberType>
+      <Attributes><Attribute><AttributeName>System.Obsolete</AttributeName></Attribute></Attributes>
+      <Parameters><Parameter Name="gtype" Type="GLib.GType" /></Parameters>
+      <Docs><param name="gtype">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public User (Midgard.MgdObject person);" />
+      <MemberType>Constructor</MemberType>
+      <Parameters><Parameter Name="person" Type="Midgard.MgdObject" /></Parameters>
+      <Docs><param name="person">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public User (IntPtr raw);" />
+      <MemberType>Constructor</MemberType>
+      <Parameters><Parameter Name="raw" Type="System.IntPtr" /></Parameters>
+      <Docs><param name="raw">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Auth">
+      <MemberSignature Language="C#" Value="public static Midgard.User Auth (Midgard.Connection mgd, string name, string password, string sitegroup, bool trusted);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>Midgard.User</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="mgd" Type="Midgard.Connection" /><Parameter Name="name" Type="System.String" /><Parameter Name="password" Type="System.String" /><Parameter Name="sitegroup" Type="System.String" /><Parameter Name="trusted" Type="System.Boolean" /></Parameters>
+      <Docs><param name="mgd">To be added.</param><param name="name">To be added.</param><param name="password">To be added.</param><param name="sitegroup">To be added.</param><param name="trusted">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="GType">
+      <MemberSignature Language="C#" Value="public static GLib.GType GType { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue><ReturnType>GLib.GType</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><value>To be added.</value><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="IsAdmin">
+      <MemberSignature Language="C#" Value="public bool IsAdmin { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><value>To be added.</value><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="IsRoot">
+      <MemberSignature Language="C#" Value="public bool IsRoot { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><value>To be added.</value><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="IsUser">
+      <MemberSignature Language="C#" Value="public bool IsUser { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><value>To be added.</value><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Password">
+      <MemberSignature Language="C#" Value="public bool Password (string login, string password, uint hashtype);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="login" Type="System.String" /><Parameter Name="password" Type="System.String" /><Parameter Name="hashtype" Type="System.UInt32" /></Parameters>
+      <Docs><param name="login">To be added.</param><param name="password">To be added.</param><param name="hashtype">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Person">
+      <MemberSignature Language="C#" Value="public Midgard.MgdObject Person { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdObject</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><value>To be added.</value><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="SetActive">
+      <MemberSignature Language="C#" Value="public bool SetActive (bool flag);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="flag" Type="System.Boolean" /></Parameters>
+      <Docs><param name="flag">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member>
+  </Members>
+</Type>

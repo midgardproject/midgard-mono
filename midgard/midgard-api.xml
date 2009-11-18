@@ -1,0 +1,1590 @@
+<?xml version="1.0"?>
+<api>
+  <!--
+
+        This file was automatically generated.
+        Please DO NOT MODIFY THIS FILE, modify .metadata files instead.
+
+-->
+  <namespace name="Midgard" library="libmidgard-2.0">
+    <enum name="MgdErrorGeneric" cname="MgdErrorGeneric" type="enum">
+      <member cname="MGD_ERR_OK" name="Ok" value="-0" />
+      <member cname="MGD_ERR_ERROR" name="Error" value="-1" />
+      <member cname="MGD_ERR_ACCESS_DENIED" name="AccessDenied" value="-2" />
+      <member cname="MGD_ERR_SITEGROUP_VIOLATION" name="SitegroupViolation" value="-3" />
+      <member cname="MGD_ERR_NOT_OBJECT" name="NotObject" value="-4" />
+      <member cname="MGD_ERR_NOT_EXISTS" name="NotExists" value="-5" />
+      <member cname="MGD_ERR_INVALID_NAME" name="InvalidName" value="-6 " />
+      <member cname="MGD_ERR_DUPLICATE" name="Duplicate" value="-7 " />
+      <member cname="MGD_ERR_HAS_DEPENDANTS" name="HasDependants" value="-8 " />
+      <member cname="MGD_ERR_RANGE" name="Range" value="-9" />
+      <member cname="MGD_ERR_NOT_CONNECTED" name="NotConnected" value="-10" />
+      <member cname="MGD_ERR_SG_NOTFOUND" name="SgNotfound" value="-11" />
+      <member cname="MGD_ERR_INVALID_OBJECT" name="InvalidObject" value="-12" />
+      <member cname="MGD_ERR_QUOTA" name="Quota" value="-13" />
+      <member cname="MGD_ERR_INTERNAL" name="Internal" value="-14" />
+      <member cname="MGD_ERR_OBJECT_NAME_EXISTS" name="ObjectNameExists" value="-15" />
+      <member cname="MGD_ERR_OBJECT_NO_STORAGE" name="ObjectNoStorage" value="-16" />
+      <member cname="MGD_ERR_OBJECT_NO_PARENT" name="ObjectNoParent" value="-17" />
+      <member cname="MGD_ERR_INVALID_PROPERTY_VALUE" name="InvalidPropertyValue" value="-18" />
+      <member cname="MGD_ERR_INVALID_PROPERTY" name="InvalidProperty" value="-19" />
+      <member cname="MGD_ERR_USER_DATA" name="UserData" value="-20" />
+      <member cname="MGD_ERR_OBJECT_DELETED" name="ObjectDeleted" value="-21" />
+      <member cname="MGD_ERR_OBJECT_PURGED" name="ObjectPurged" value="-22" />
+      <member cname="MGD_ERR_OBJECT_EXPORTED" name="ObjectExported" value="-23" />
+      <member cname="MGD_ERR_OBJECT_IMPORTED" name="ObjectImported" value="-24" />
+      <member cname="MGD_ERR_MISSED_DEPENDENCE" name="MissedDependence" value="-25" />
+      <member cname="MGD_ERR_TREE_IS_CIRCULAR" name="TreeIsCircular" value="-26" />
+      <member cname="MGD_ERR_OBJECT_IS_LOCKED" name="ObjectIsLocked" value="-27" />
+    </enum>
+    <enum name="DBType" cname="MidgardDBType" type="enum">
+      <member cname="MIDGARD_DB_TYPE_MYSQL" name="Mysql" value="1" />
+      <member cname="MIDGARD_DB_TYPE_POSTGRES" name="Postgres" />
+      <member cname="MIDGARD_DB_TYPE_FREETDS" name="Freetds" />
+      <member cname="MIDGARD_DB_TYPE_SQLITE" name="Sqlite" />
+      <member cname="MIDGARD_DB_TYPE_ODBC" name="Odbc" />
+      <member cname="MIDGARD_DB_TYPE_ORACLE" name="Oracle" />
+    </enum>
+    <enum name="TypeAuth" cname="MidgardTypeAuth" type="enum">
+      <member cname="MIDGARD_AUTHTYPE_NORMAL" name="Normal" />
+      <member cname="MIDGARD_AUTHTYPE_PAM" name="Pam" />
+      <member cname="MIDGARD_AUTHTYPE_TRUST" name="Trust" />
+    </enum>
+    <object name="MgdParamSpecLongtext" cname="MgdParamSpecLongtext" />
+    <object name="Blob" cname="MidgardBlob" parent="GObject">
+      <field name="Priv" cname="priv" type="MidgardBlobPrivate*" />
+      <method name="Exists" cname="midgard_blob_exists">
+        <return-type type="gboolean" />
+      </method>
+      <method name="GetHandler" cname="midgard_blob_get_handler">
+        <return-type type="GIOChannel*" />
+        <parameters>
+          <parameter type="const-gchar*" name="mode" />
+        </parameters>
+      </method>
+      <method name="GetPath" cname="midgard_blob_get_path">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetType" cname="midgard_blob_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="midgard_blob_new">
+        <parameters>
+          <parameter type="MgdObject*" name="attachment" />
+          <parameter type="const-gchar*" name="encoding" />
+        </parameters>
+      </constructor>
+      <method name="ReadContent" cname="midgard_blob_read_content">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="gsize*" name="bytes_read" />
+        </parameters>
+      </method>
+      <method name="RemoveFile" cname="midgard_blob_remove_file">
+        <return-type type="gboolean" />
+      </method>
+      <method name="WriteContent" cname="midgard_blob_write_content">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="content" />
+        </parameters>
+      </method>
+    </object>
+    <object name="Collector" cname="MidgardCollector" parent="MidgardQueryBuilder">
+      <field name="Priv" cname="priv" type="MidgardCollectorPrivate*" />
+      <method name="AddConstraint" cname="midgard_collector_add_constraint">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="const-gchar*" name="op" />
+          <parameter type="const-GValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="AddConstraintWithProperty" cname="midgard_collector_add_constraint_with_property">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="property_a" />
+          <parameter type="const-gchar*" name="op" />
+          <parameter type="const-gchar*" name="property_b" />
+        </parameters>
+      </method>
+      <method name="AddOrder" cname="midgard_collector_add_order">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="const-gchar*" name="dir" />
+        </parameters>
+      </method>
+      <method name="AddValueProperty" cname="midgard_collector_add_value_property">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="value" />
+        </parameters>
+      </method>
+      <method name="BeginGroup" cname="midgard_collector_begin_group">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="type" />
+        </parameters>
+      </method>
+      <method name="Count" cname="midgard_collector_count">
+        <return-type type="void" />
+      </method>
+      <method name="Destroy" cname="midgard_collector_destroy">
+        <return-type type="void" />
+      </method>
+      <method name="EndGroup" cname="midgard_collector_end_group">
+        <return-type type="gboolean" />
+      </method>
+      <method name="Execute" cname="midgard_collector_execute">
+        <return-type type="gboolean" />
+      </method>
+      <method name="Get" cname="midgard_collector_get">
+        <return-type type="GData*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+        </parameters>
+      </method>
+      <method name="GetSubkey" cname="midgard_collector_get_subkey">
+        <return-type type="GValue*" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="const-gchar*" name="subkey" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="midgard_collector_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="ListKeys" cname="midgard_collector_list_keys">
+        <return-type type="gchar**" />
+      </method>
+      <method name="Merge" cname="midgard_collector_merge">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MidgardCollector*" name="mc" />
+          <parameter type="gboolean" name="overwrite" />
+        </parameters>
+      </method>
+      <constructor cname="midgard_collector_new">
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="const-gchar*" name="classname" />
+          <parameter type="const-gchar*" name="domain" />
+          <parameter type="GValue*" name="value" />
+        </parameters>
+      </constructor>
+      <method name="RemoveKey" cname="midgard_collector_remove_key">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+        </parameters>
+      </method>
+      <method name="Set" cname="midgard_collector_set">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="const-gchar*" name="subkey" />
+          <parameter type="GValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="SetKeyProperty" cname="midgard_collector_set_key_property">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="key" />
+          <parameter type="GValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="SetLang" cname="midgard_collector_set_lang">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gint" name="lang" />
+        </parameters>
+      </method>
+      <method name="SetLimit" cname="midgard_collector_set_limit">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="guint" name="limit" />
+        </parameters>
+      </method>
+      <method name="SetOffset" cname="midgard_collector_set_offset">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="guint" name="offset" />
+        </parameters>
+      </method>
+      <method name="UnsetLanguages" cname="midgard_collector_unset_languages">
+        <return-type type="void" />
+      </method>
+    </object>
+    <object name="Config" cname="MidgardConfig" parent="GObject">
+      <field name="Dbtype" cname="dbtype" type="gchar*" />
+      <field name="Host" cname="host" type="gchar*" />
+      <field name="Port" cname="port" type="guint" />
+      <field name="Database" cname="database" type="gchar*" />
+      <field name="Dbuser" cname="dbuser" type="gchar*" />
+      <field name="Dbpass" cname="dbpass" type="gchar*" />
+      <field name="Blobdir" cname="blobdir" type="gchar*" />
+      <field name="Logfilename" cname="logfilename" type="gchar*" />
+      <field name="Schemafile" cname="schemafile" type="gchar*" />
+      <field name="DefaultLang" cname="default_lang" type="gchar*" />
+      <field name="Loglevel" cname="loglevel" type="gchar*" />
+      <field name="Tablecreate" cname="tablecreate" type="gboolean" />
+      <field name="Tableupdate" cname="tableupdate" type="gboolean" />
+      <field name="Logfile" cname="logfile" type="FILE*" />
+      <field name="LogChannel" cname="log_channel" type="GIOChannel*" />
+      <field name="Mgdusername" cname="mgdusername" type="gchar*" />
+      <field name="Mgdpassword" cname="mgdpassword" type="gchar*" />
+      <field name="Testunit" cname="testunit" type="gboolean" />
+      <field name="Loghandler" cname="loghandler" type="guint" />
+      <field name="Authtype" cname="authtype" type="guint" />
+      <field name="Pamfile" cname="pamfile" type="gchar*" />
+      <field name="Gdathreads" cname="gdathreads" type="gboolean" />
+      <field name="Priv" cname="priv" type="MidgardConfigPrivate*" />
+      <method name="CreateBlobdir" cname="midgard_config_create_blobdir">
+        <return-type type="gboolean" />
+      </method>
+      <method name="CreateClassTable" cname="midgard_config_create_class_table">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MidgardObjectClass*" name="klass" />
+          <parameter type="MidgardConnection*" name="mgd" />
+        </parameters>
+      </method>
+      <method name="CreateMidgardTables" cname="midgard_config_create_midgard_tables">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+        </parameters>
+      </method>
+      <method name="GetAuthtype" cname="midgard_config_get_authtype">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetBlobdir" cname="midgard_config_get_blobdir">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetDatabaseHost" cname="midgard_config_get_database_host">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetDatabaseName" cname="midgard_config_get_database_name">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetDatabasePassword" cname="midgard_config_get_database_password">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetDatabasePort" cname="midgard_config_get_database_port">
+        <return-type type="guint" />
+      </method>
+      <method name="GetDatabaseType" cname="midgard_config_get_database_type">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetDatabaseUsername" cname="midgard_config_get_database_username">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetDefaultLanguage" cname="midgard_config_get_default_language">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetLogfile" cname="midgard_config_get_logfile">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetLoglevel" cname="midgard_config_get_loglevel">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetMidgardPassword" cname="midgard_config_get_midgard_password">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetMidgardUsername" cname="midgard_config_get_midgard_username">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetPamfile" cname="midgard_config_get_pamfile">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetTableCreate" cname="midgard_config_get_table_create">
+        <return-type type="gboolean" />
+      </method>
+      <method name="GetTableUpdate" cname="midgard_config_get_table_update">
+        <return-type type="gboolean" />
+      </method>
+      <method name="GetTestunit" cname="midgard_config_get_testunit">
+        <return-type type="gboolean" />
+      </method>
+      <method name="GetType" cname="midgard_config_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="Init" cname="midgard_config_init" shared="true">
+        <return-type type="MidgardConnection*" />
+        <parameters>
+          <parameter type="const-gchar*" name="fname" />
+        </parameters>
+      </method>
+      <method name="ListFiles" cname="midgard_config_list_files" shared="true">
+        <return-type type="gchar**" />
+        <parameters>
+          <parameter type="gboolean" name="user" />
+        </parameters>
+      </method>
+      <constructor cname="midgard_config_new" />
+      <method name="ReadFile" cname="midgard_config_read_file">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="filename" />
+          <parameter type="gboolean" name="user" />
+          <parameter type="GError**" name="error" />
+        </parameters>
+      </method>
+      <method name="SaveFile" cname="midgard_config_save_file">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="gboolean" name="user" />
+          <parameter type="GError**" name="error" />
+        </parameters>
+      </method>
+      <method name="SetAuthtype" cname="midgard_config_set_authtype">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="authtype" />
+        </parameters>
+      </method>
+      <method name="SetBlobdir" cname="midgard_config_set_blobdir">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="blobdir" />
+        </parameters>
+      </method>
+      <method name="SetDatabaseHost" cname="midgard_config_set_database_host">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="host" />
+        </parameters>
+      </method>
+      <method name="SetDatabaseName" cname="midgard_config_set_database_name">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="name" />
+        </parameters>
+      </method>
+      <method name="SetDatabasePassword" cname="midgard_config_set_database_password">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="password" />
+        </parameters>
+      </method>
+      <method name="SetDatabasePort" cname="midgard_config_set_database_port">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="guint" name="port" />
+        </parameters>
+      </method>
+      <method name="SetDatabaseType" cname="midgard_config_set_database_type">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="type" />
+        </parameters>
+      </method>
+      <method name="SetDatabaseUsername" cname="midgard_config_set_database_username">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="username" />
+        </parameters>
+      </method>
+      <method name="SetDefaultLanguage" cname="midgard_config_set_default_language">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="language" />
+        </parameters>
+      </method>
+      <method name="SetLogfile" cname="midgard_config_set_logfile">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="logfile" />
+        </parameters>
+      </method>
+      <method name="SetLoglevel" cname="midgard_config_set_loglevel">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="loglevel" />
+        </parameters>
+      </method>
+      <method name="SetMidgardPassword" cname="midgard_config_set_midgard_password">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="password" />
+        </parameters>
+      </method>
+      <method name="SetMidgardUsername" cname="midgard_config_set_midgard_username">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="username" />
+        </parameters>
+      </method>
+      <method name="SetPamfile" cname="midgard_config_set_pamfile">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="pamfile" />
+        </parameters>
+      </method>
+      <method name="SetTableCreate" cname="midgard_config_set_table_create">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="toggle" />
+        </parameters>
+      </method>
+      <method name="SetTableUpdate" cname="midgard_config_set_table_update">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="toggle" />
+        </parameters>
+      </method>
+      <method name="SetTestunit" cname="midgard_config_set_testunit">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gboolean" name="toggle" />
+        </parameters>
+      </method>
+      <method name="Struct2gobject" cname="midgard_config_struct2gobject">
+        <return-type type="MidgardConfig*" />
+      </method>
+      <method name="StructFree" cname="midgard_config_struct_free">
+        <return-type type="void" />
+      </method>
+      <method name="StructNew" cname="midgard_config_struct_new" shared="true">
+        <return-type type="MidgardConfig*" />
+      </method>
+      <method name="UpdateClassTable" cname="midgard_config_update_class_table">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MidgardObjectClass*" name="klass" />
+          <parameter type="MidgardConnection*" name="mgd" />
+        </parameters>
+      </method>
+    </object>
+    <object name="Connection" cname="MidgardConnection" parent="GObject">
+      <field name="Errnum" cname="errnum" type="gint" />
+      <field name="Errstr" cname="errstr" type="gchar*" />
+      <field name="Err" cname="err" type="GError*" />
+      <field name="Rcfg" cname="rcfg" type="MidgardRequestConfig*" />
+      <field name="Priv" cname="priv" type="MidgardConnectionPrivate*" />
+      <field name="Lang" cname="lang" type="int" />
+      <field name="DefaultLang" cname="default_lang" type="int" />
+      <field name="Person" cname="person" type="gpointer" />
+      <field name="Quota" cname="quota" type="gboolean" />
+      <method name="Close" cname="midgard_connection_close">
+        <return-type type="void" />
+      </method>
+      <method name="Copy" cname="midgard_connection_copy">
+        <return-type type="MidgardConnection*" owned="true" />
+      </method>
+      <method name="GetError" cname="midgard_connection_get_error">
+        <return-type type="gint" />
+      </method>
+      <method name="GetLangId" cname="midgard_connection_get_lang_id">
+        <return-type type="guint" />
+        <parameters>
+          <parameter type="const-gchar*" name="language" />
+        </parameters>
+      </method>
+      <method name="GetLoghandler" cname="midgard_connection_get_loghandler">
+        <return-type type="guint" />
+      </method>
+      <method name="GetLoglevel" cname="midgard_connection_get_loglevel">
+        <return-type type="guint" />
+      </method>
+      <method name="GetRequestConfig" cname="midgard_connection_get_request_config">
+        <return-type type="const-MidgardRequestConfig*" />
+      </method>
+      <method name="GetSitegroupId" cname="midgard_connection_get_sitegroup_id">
+        <return-type type="guint" />
+      </method>
+      <method name="GetType" cname="midgard_connection_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GetUser" cname="midgard_connection_get_user">
+        <return-type type="MidgardUser*" />
+      </method>
+      <constructor cname="midgard_connection_new" />
+      <method name="Open" cname="midgard_connection_open">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-char*" name="name" />
+          <parameter type="GError**" name="error" />
+        </parameters>
+      </method>
+      <method name="OpenAll" cname="midgard_connection_open_all" shared="true">
+        <return-type type="GHashTable*" />
+        <parameters>
+          <parameter type="gboolean" name="userdir" />
+        </parameters>
+      </method>
+      <method name="OpenConfig" cname="midgard_connection_open_config">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MidgardConfig*" name="config" />
+        </parameters>
+      </method>
+      <method name="SetDefaultLang" cname="midgard_connection_set_default_lang">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="language" />
+        </parameters>
+      </method>
+      <method name="SetError" cname="midgard_connection_set_error">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gint" name="errcode" />
+        </parameters>
+      </method>
+      <method name="SetLang" cname="midgard_connection_set_lang">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-char*" name="language" />
+        </parameters>
+      </method>
+      <method name="SetLoghandler" cname="midgard_connection_set_loghandler">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="guint" name="loghandler" />
+        </parameters>
+      </method>
+      <method name="SetLoglevel" cname="midgard_connection_set_loglevel">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="level" />
+          <parameter type="GLogFunc" name="log_func" />
+        </parameters>
+      </method>
+      <method name="SetRequestConfig" cname="midgard_connection_set_request_config">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MidgardRequestConfig*" name="rcfg" />
+        </parameters>
+      </method>
+      <method name="SetSitegroup" cname="midgard_connection_set_sitegroup">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="name" />
+        </parameters>
+      </method>
+      <method name="Struct2gobject" cname="midgard_connection_struct2gobject">
+        <return-type type="MidgardConnection*" />
+      </method>
+      <method name="StructFree" cname="midgard_connection_struct_free">
+        <return-type type="void" />
+      </method>
+      <method name="StructNew" cname="midgard_connection_struct_new" shared="true">
+        <return-type type="MidgardConnection*" />
+      </method>
+      <method name="StructOpenConfig" cname="midgard_connection_struct_open_config">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MidgardConfig*" name="config" />
+        </parameters>
+      </method>
+      <method name="WorkaroundGet" cname="midgard_connection_workaround_get" shared="true">
+        <return-type type="MidgardConnection*" />
+      </method>
+      <method name="WorkaroundSet" cname="midgard_connection_workaround_set">
+        <return-type type="void" />
+      </method>
+    </object>
+    <object name="DBObject" cname="MidgardDBObject" parent="GObject">
+      <field name="Dbpriv" cname="dbpriv" type="MidgardDBObjectPrivate*" />
+      <method name="GetType" cname="midgard_dbobject_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+    </object>
+    <object name="Dbus" cname="MidgardDbus" parent="GObject">
+      <field name="Priv" cname="priv" type="MidgardDbusPrivate*" />
+      <method name="GetMessage" cname="midgard_dbus_get_message">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetName" cname="midgard_dbus_get_name" shared="true">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetType" cname="midgard_dbus_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="midgard_dbus_new">
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="const-gchar*" name="path" />
+        </parameters>
+      </constructor>
+      <method name="Send" cname="midgard_dbus_send" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="const-gchar*" name="path" />
+          <parameter type="const-gchar*" name="message" />
+        </parameters>
+      </method>
+    </object>
+    <object name="HttpHost" cname="MidgardHttpHost" parent="GObject">
+      <field name="Uri" cname="uri" type="const-gchar*" />
+      <field name="Prefix" cname="prefix" type="const-gchar*" />
+      <field name="Name" cname="name" type="const-gchar*" />
+      <field name="Port" cname="port" type="guint" />
+      <field name="Host" cname="host" type="MgdObject*" />
+      <field name="Style" cname="style" type="MgdObject*" />
+      <field name="RootPage" cname="root_page" type="MgdObject*" />
+      <field name="AuthRequired" cname="auth_required" type="gboolean" />
+      <field name="Argv" cname="argv" type="GList*" />
+      <field name="PossiblePrefix" cname="possible_prefix" type="const-gchar*" />
+      <field name="Urilist" cname="urilist" type="GList*" />
+      <field name="Mgd" cname="mgd" type="MidgardConnection*" />
+      <method name="GetRequestConfig" cname="midgard_http_host_get_request_config">
+        <return-type type="MidgardRequestConfig*" />
+      </method>
+      <method name="GetStyle" cname="midgard_http_host_get_style">
+        <return-type type="MgdObject*" />
+      </method>
+      <method name="GetType" cname="midgard_http_host_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="midgard_http_host_new">
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="guint" name="port" />
+          <parameter type="const-gchar*" name="uri" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="Metadata" cname="MidgardMetadata" parent="GObject">
+      <field name="Dbpriv" cname="dbpriv" type="MidgardDBObjectPrivate*" />
+      <field name="Priv" cname="priv" type="MidgardMetadataPrivate*" />
+      <method name="GetType" cname="midgard_metadata_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="midgard_metadata_new">
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+        </parameters>
+      </constructor>
+    </object>
+    <object name="MgdObject" cname="MgdObject" parent="GObject">
+      <field name="Dbpriv" cname="dbpriv" type="MidgardDBObjectPrivate*" />
+      <field name="Priv" cname="priv" type="MidgardObjectPrivate*" />
+      <field name="Metadata" cname="metadata" type="MidgardMetadata*" />
+    </object>
+    <object name="QueryBuilder" cname="MidgardQueryBuilder" parent="GObject">
+      <field name="Priv" cname="priv" type="MidgardQueryBuilderPrivate*" />
+      <method name="AddConstraint" cname="midgard_query_builder_add_constraint">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="const-gchar*" name="op" />
+          <parameter type="const-GValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="AddConstraintWithProperty" cname="midgard_query_builder_add_constraint_with_property">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="property_a" />
+          <parameter type="const-gchar*" name="op" />
+          <parameter type="const-gchar*" name="property_b" />
+        </parameters>
+      </method>
+      <method name="AddOrder" cname="midgard_query_builder_add_order">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="const-gchar*" name="dir" />
+        </parameters>
+      </method>
+      <method name="BeginGroup" cname="midgard_query_builder_begin_group">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="type" />
+        </parameters>
+      </method>
+      <method name="Count" cname="midgard_query_builder_count">
+        <return-type type="guint" />
+      </method>
+      <method name="EndGroup" cname="midgard_query_builder_end_group">
+        <return-type type="gboolean" />
+      </method>
+      <method name="Execute" cname="midgard_query_builder_execute">
+        <return-type type="GObject**" />
+        <parameters>
+          <parameter type="MidgardTypeHolder*" name="holder" />
+        </parameters>
+      </method>
+      <method name="Free" cname="midgard_query_builder_free">
+        <return-type type="void" />
+      </method>
+      <method name="GetGuid" cname="midgard_query_builder_get_guid">
+        <return-type type="GList*" />
+      </method>
+      <method name="GetType" cname="midgard_query_builder_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="IncludeDeleted" cname="midgard_query_builder_include_deleted">
+        <return-type type="void" />
+      </method>
+      <method name="Join" cname="midgard_query_builder_join">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="prop" />
+          <parameter type="const-gchar*" name="jobject" />
+          <parameter type="const-gchar*" name="jprop" />
+        </parameters>
+      </method>
+      <constructor cname="midgard_query_builder_new">
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="const-gchar*" name="classname" />
+        </parameters>
+      </constructor>
+      <method name="SetLang" cname="midgard_query_builder_set_lang">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="gint" name="lang" />
+        </parameters>
+      </method>
+      <method name="SetLimit" cname="midgard_query_builder_set_limit">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="guint" name="limit" />
+        </parameters>
+      </method>
+      <method name="SetOffset" cname="midgard_query_builder_set_offset">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="guint" name="offset" />
+        </parameters>
+      </method>
+      <method name="UnsetLanguages" cname="midgard_query_builder_unset_languages">
+        <return-type type="void" />
+      </method>
+    </object>
+    <object name="Replicator" cname="MidgardReplicator" parent="GObject">
+      <field name="Priv" cname="priv" type="MidgardReplicatorPrivate*" />
+      <method name="Export" cname="midgard_replicator_export">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MidgardDBObject*" name="object" />
+        </parameters>
+      </method>
+      <method name="ExportBlob" cname="midgard_replicator_export_blob">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+        </parameters>
+      </method>
+      <method name="ExportByGuid" cname="midgard_replicator_export_by_guid" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="const-gchar*" name="guid" />
+        </parameters>
+      </method>
+      <method name="ExportMedia" cname="midgard_replicator_export_media">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+        </parameters>
+      </method>
+      <method name="ExportPurged" cname="midgard_replicator_export_purged">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="MidgardObjectClass*" name="klass" />
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="const-gchar*" name="startdate" />
+          <parameter type="const-gchar*" name="enddate" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="midgard_replicator_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="ImportFromXml" cname="midgard_replicator_import_from_xml">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="const-gchar*" name="xml" />
+          <parameter type="gboolean" name="force" />
+        </parameters>
+      </method>
+      <method name="ImportObject" cname="midgard_replicator_import_object">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MidgardDBObject*" name="object" />
+          <parameter type="gboolean" name="force" />
+        </parameters>
+      </method>
+      <constructor cname="midgard_replicator_new">
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+        </parameters>
+      </constructor>
+      <method name="Serialize" cname="midgard_replicator_serialize">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="GObject*" name="object" />
+        </parameters>
+      </method>
+      <method name="SerializeBlob" cname="midgard_replicator_serialize_blob">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+        </parameters>
+      </method>
+      <method name="Unserialize" cname="midgard_replicator_unserialize">
+        <return-type type="GObject**" />
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="const-gchar*" name="xml" />
+          <parameter type="gboolean" name="force" />
+        </parameters>
+      </method>
+    </object>
+    <object name="RequestConfig" cname="MidgardRequestConfig" parent="GObject">
+      <field name="Host" cname="host" type="GObject*" />
+      <field name="Page" cname="page" type="GObject*" />
+      <field name="Style" cname="style" type="GObject*" />
+      <field name="Pages" cname="pages" type="const-GObject**" />
+      <field name="Uri" cname="uri" type="const-gchar*" />
+      <field name="AuthRequired" cname="auth_required" type="gboolean" />
+      <field name="IsAuth" cname="is_auth" type="gboolean" />
+      <field name="Argv" cname="argv" type="GValueArray*" />
+      <field name="Argc" cname="argc" type="gint" />
+      <field name="Priv" cname="priv" type="MidgardRequestConfigPrivate*" />
+      <method name="GetArgc" cname="midgard_request_config_get_argc">
+        <return-type type="guint" />
+      </method>
+      <method name="GetArgv" cname="midgard_request_config_get_argv">
+        <return-type type="GValueArray*" />
+      </method>
+      <method name="GetAuth" cname="midgard_request_config_get_auth">
+        <return-type type="gboolean" />
+      </method>
+      <method name="GetHost" cname="midgard_request_config_get_host">
+        <return-type type="GObject*" />
+      </method>
+      <method name="GetPage" cname="midgard_request_config_get_page">
+        <return-type type="GObject*" />
+      </method>
+      <method name="GetPages" cname="midgard_request_config_get_pages">
+        <return-type type="const-GObject**" />
+      </method>
+      <method name="GetStyle" cname="midgard_request_config_get_style">
+        <return-type type="GObject*" />
+      </method>
+      <method name="GetType" cname="midgard_request_config_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GetUri" cname="midgard_request_config_get_uri">
+        <return-type type="const-gchar*" />
+      </method>
+      <constructor cname="midgard_request_config_new">
+        <parameters>
+          <parameter type="const-gchar*" name="uri" />
+        </parameters>
+      </constructor>
+      <method name="SetArgc" cname="midgard_request_config_set_argc">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="guint" name="argc" />
+        </parameters>
+      </method>
+      <method name="SetArgv" cname="midgard_request_config_set_argv">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GValueArray*" name="argv" />
+        </parameters>
+      </method>
+      <method name="SetAuth" cname="midgard_request_config_set_auth">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="gboolean" name="auth" />
+        </parameters>
+      </method>
+      <method name="SetHost" cname="midgard_request_config_set_host">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GObject*" name="host" />
+        </parameters>
+      </method>
+      <method name="SetPage" cname="midgard_request_config_set_page">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GObject*" name="page" />
+        </parameters>
+      </method>
+      <method name="SetPages" cname="midgard_request_config_set_pages">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GObject**" name="pages" />
+        </parameters>
+      </method>
+      <method name="SetStyle" cname="midgard_request_config_set_style">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="GObject*" name="style" />
+        </parameters>
+      </method>
+    </object>
+    <object cname="midgard" name="Context">
+      <method name="ErrorDefaultLog" cname="midgard_error_default_log" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="domain" />
+          <parameter type="GLogLevelFlags" name="level" />
+          <parameter type="const-gchar*" name="msg" />
+          <parameter type="gpointer" name="ptr" />
+        </parameters>
+      </method>
+      <method name="ErrorGeneric" cname="midgard_error_generic" shared="true">
+        <return-type type="GQuark" />
+      </method>
+      <method name="ErrorParseLoglevel" cname="midgard_error_parse_loglevel" shared="true">
+        <return-type type="gint" />
+        <parameters>
+          <parameter type="const-gchar*" name="levelstring" />
+        </parameters>
+      </method>
+      <method name="ErrorString" cname="midgard_error_string" shared="true">
+        <return-type type="const-gchar*" />
+        <parameters>
+          <parameter type="GQuark" name="domain" />
+          <parameter type="gint" name="errcode" />
+        </parameters>
+      </method>
+      <method name="GuidExternal" cname="midgard_guid_external" shared="true">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="const-gchar*" name="external" />
+        </parameters>
+      </method>
+      <method name="GuidGetType" cname="midgard_guid_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="GuidNew" cname="midgard_guid_new" shared="true">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+        </parameters>
+      </method>
+      <method name="HashStringsNew" cname="midgard_hash_strings_new" shared="true">
+        <return-type type="GHashTable*" />
+      </method>
+      <method name="Init" cname="midgard_init" shared="true">
+        <return-type type="void" />
+      </method>
+      <method name="IsGuid" cname="midgard_is_guid" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="guid" />
+        </parameters>
+      </method>
+      <method name="IsUuid" cname="midgard_is_uuid" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="uuid" />
+        </parameters>
+      </method>
+      <method name="LongtextGetType" cname="midgard_longtext_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="ParamLongtextGetType" cname="midgard_param_longtext_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="QuotaCreate" cname="midgard_quota_create" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+        </parameters>
+      </method>
+      <method name="QuotaGetObjectSize" cname="midgard_quota_get_object_size" shared="true">
+        <return-type type="guint" />
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+        </parameters>
+      </method>
+      <method name="QuotaGetSitegroupSize" cname="midgard_quota_get_sitegroup_size" shared="true">
+        <return-type type="guint32" />
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="guint" name="sg" />
+        </parameters>
+      </method>
+      <method name="QuotaGetTypeSize" cname="midgard_quota_get_type_size" shared="true">
+        <return-type type="guint" />
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="const-gchar*" name="typename" />
+        </parameters>
+      </method>
+      <method name="QuotaRemove" cname="midgard_quota_remove" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+          <parameter type="guint" name="size" />
+        </parameters>
+      </method>
+      <method name="QuotaSetSitegroupSize" cname="midgard_quota_set_sitegroup_size" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="guint" name="sitegroup" />
+          <parameter type="guint" name="size" />
+          <parameter type="guint" name="records" />
+        </parameters>
+      </method>
+      <method name="QuotaSetTypeSize" cname="midgard_quota_set_type_size" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="guint" name="sitegroup" />
+          <parameter type="const-gchar*" name="typename" />
+          <parameter type="guint" name="size" />
+          <parameter type="guint" name="records" />
+        </parameters>
+      </method>
+      <method name="QuotaSizeIsReached" cname="midgard_quota_size_is_reached" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+          <parameter type="gint" name="size" />
+        </parameters>
+      </method>
+      <method name="QuotaUpdate" cname="midgard_quota_update" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+          <parameter type="guint" name="init_size" />
+        </parameters>
+      </method>
+      <method name="SetError" cname="midgard_set_error" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="GQuark" name="domain" />
+          <parameter type="gint" name="errcode" />
+          <parameter type="const-gchar*" name="msg" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </method>
+      <method name="UuidExternal" cname="midgard_uuid_external" shared="true">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="const-gchar*" name="external" />
+        </parameters>
+      </method>
+      <method name="UuidNew" cname="midgard_uuid_new" shared="true">
+        <return-type type="gchar*" />
+      </method>
+    </object>
+    <object name="Sitegroup" cname="MidgardSitegroup" parent="GObject">
+      <field name="Dbpriv" cname="dbpriv" type="MidgardDBObjectPrivate*" />
+      <field name="Priv" cname="priv" type="MidgardSitegroupPrivate*" />
+      <field name="Name" cname="name" type="const-gchar*" />
+      <field name="Realm" cname="realm" type="const-gchar*" />
+      <field name="Group" cname="group" type="const-gchar*" />
+      <field name="Ispublic" cname="ispublic" type="gboolean" />
+      <field name="Id" cname="id" type="guint" />
+      <field name="Adminid" cname="adminid" type="guint" />
+      <field name="Metadata" cname="metadata" type="GObject*" />
+      <method name="Create" cname="midgard_sitegroup_create">
+        <return-type type="gboolean" />
+      </method>
+      <method name="Delete" cname="midgard_sitegroup_delete">
+        <return-type type="gboolean" />
+      </method>
+      <method name="GetType" cname="midgard_sitegroup_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="List" cname="midgard_sitegroup_list" shared="true">
+        <return-type type="gchar**" />
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+        </parameters>
+      </method>
+      <constructor cname="midgard_sitegroup_new">
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="const-GValue*" name="value" />
+        </parameters>
+      </constructor>
+      <method name="Update" cname="midgard_sitegroup_update">
+        <return-type type="gboolean" />
+      </method>
+    </object>
+    <object name="User" cname="MidgardUser" parent="GObject">
+      <field name="Dbpriv" cname="dbpriv" type="MidgardDBObjectPrivate*" />
+      <field name="Priv" cname="priv" type="MidgardUserPrivate*" />
+      <method name="Auth" cname="midgard_user_auth" shared="true">
+        <return-type type="MidgardUser*" />
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="const-gchar*" name="password" />
+          <parameter type="const-gchar*" name="sitegroup" />
+          <parameter type="gboolean" name="trusted" />
+        </parameters>
+      </method>
+      <method name="GetPerson" cname="midgard_user_get_person">
+        <return-type type="MgdObject*" />
+      </method>
+      <method name="GetType" cname="midgard_user_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="IsAdmin" cname="midgard_user_is_admin">
+        <return-type type="gboolean" />
+      </method>
+      <method name="IsRoot" cname="midgard_user_is_root">
+        <return-type type="gboolean" />
+      </method>
+      <method name="IsUser" cname="midgard_user_is_user">
+        <return-type type="gboolean" />
+      </method>
+      <constructor cname="midgard_user_new">
+        <parameters>
+          <parameter type="MgdObject*" name="person" />
+        </parameters>
+      </constructor>
+      <method name="Password" cname="midgard_user_password">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="login" />
+          <parameter type="const-gchar*" name="password" />
+          <parameter type="guint" name="hashtype" />
+        </parameters>
+      </method>
+      <method name="SetActive" cname="midgard_user_set_active">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="gboolean" name="flag" />
+        </parameters>
+      </method>
+    </object>
+    <struct name="MgdSchema" cname="MgdSchema">
+      <field name="Types" cname="types" type="GHashTable*" />
+    </struct>
+    <struct name="MgdSchemaTypeAttr" cname="MgdSchemaTypeAttr" opaque="true" />
+    <struct name="ConnectionCache" cname="MidgardConnectionCache" opaque="true" />
+    <struct name="Object" cname="MidgardObject" opaque="true">
+      <field name="Parent" cname="parent" type="GObject" access="public" writeable="true" />
+      <field name="Dbpriv" cname="dbpriv" type="MidgardDBObjectPrivate*" access="public" writeable="true" />
+      <field name="Priv" cname="priv" type="MidgardObjectPrivate*" access="public" writeable="true" />
+      <field name="Metadata" cname="metadata" type="MidgardMetadata*" access="public" writeable="true" />
+      <method name="Approve" cname="midgard_object_approve" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+        </parameters>
+      </method>
+      <method name="BuildPath" cname="midgard_object_build_path" shared="true">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="MgdObject*" name="mobj" />
+        </parameters>
+      </method>
+      <method name="ClassGetObjectByGuid" cname="midgard_object_class_get_object_by_guid" shared="true">
+        <return-type type="MgdObject*" />
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="const-gchar*" name="guid" />
+        </parameters>
+      </method>
+      <method name="ClassGetObjectByPath" cname="midgard_object_class_get_object_by_path" shared="true">
+        <return-type type="MgdObject*" />
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="const-gchar*" name="classname" />
+          <parameter type="const-gchar*" name="object_path" />
+        </parameters>
+      </method>
+      <method name="ClassGetPrimaryProperty" cname="midgard_object_class_get_primary_property" shared="true">
+        <return-type type="const-gchar*" />
+        <parameters>
+          <parameter type="MidgardObjectClass*" name="klass" />
+        </parameters>
+      </method>
+      <method name="ClassGetPropertyParent" cname="midgard_object_class_get_property_parent" shared="true">
+        <return-type type="const-gchar*" />
+        <parameters>
+          <parameter type="MidgardObjectClass*" name="klass" />
+        </parameters>
+      </method>
+      <method name="ClassGetPropertyUp" cname="midgard_object_class_get_property_up" shared="true">
+        <return-type type="const-gchar*" />
+        <parameters>
+          <parameter type="MidgardObjectClass*" name="klass" />
+        </parameters>
+      </method>
+      <method name="ClassIsMultilang" cname="midgard_object_class_is_multilang" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MidgardObjectClass*" name="klass" />
+        </parameters>
+      </method>
+      <method name="ClassListChildren" cname="midgard_object_class_list_children" shared="true">
+        <return-type type="MidgardObjectClass**" />
+        <parameters>
+          <parameter type="MidgardObjectClass*" name="klass" />
+        </parameters>
+      </method>
+      <method name="ClassUndelete" cname="midgard_object_class_undelete" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="const-gchar*" name="guid" />
+        </parameters>
+      </method>
+      <method name="Create" cname="midgard_object_create" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+        </parameters>
+      </method>
+      <method name="CreateAttachment" cname="midgard_object_create_attachment" shared="true">
+        <return-type type="MgdObject*" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="const-gchar*" name="title" />
+          <parameter type="const-gchar*" name="mimetype" />
+        </parameters>
+      </method>
+      <method name="Delete" cname="midgard_object_delete" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+        </parameters>
+      </method>
+      <method name="DeleteAttachments" cname="midgard_object_delete_attachments" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+          <parameter type="guint" name="n_params" />
+          <parameter type="const-GParameter*" name="parameters" />
+        </parameters>
+      </method>
+      <method name="DeleteParameters" cname="midgard_object_delete_parameters" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+          <parameter type="guint" name="n_params" />
+          <parameter type="const-GParameter*" name="parameters" />
+        </parameters>
+      </method>
+      <method name="FindAttachments" cname="midgard_object_find_attachments" shared="true">
+        <return-type type="MgdObject**" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+          <parameter type="guint" name="n_params" />
+          <parameter type="const-GParameter*" name="parameters" />
+        </parameters>
+      </method>
+      <method name="FindParameters" cname="midgard_object_find_parameters" shared="true">
+        <return-type type="MgdObject**" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+          <parameter type="guint" name="n_params" />
+          <parameter type="const-GParameter*" name="parameters" />
+        </parameters>
+      </method>
+      <method name="GetByGuid" cname="midgard_object_get_by_guid" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+          <parameter type="const-gchar*" name="guid" />
+        </parameters>
+      </method>
+      <method name="GetById" cname="midgard_object_get_by_id" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+          <parameter type="guint" name="id" />
+        </parameters>
+      </method>
+      <method name="GetByPath" cname="midgard_object_get_by_path" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+          <parameter type="const-gchar*" name="path" />
+        </parameters>
+      </method>
+      <method name="GetConnection" cname="midgard_object_get_connection" shared="true">
+        <return-type type="const-MidgardConnection*" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+        </parameters>
+      </method>
+      <method name="GetLanguages" cname="midgard_object_get_languages" shared="true">
+        <return-type type="GObject**" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+          <parameter type="MidgardTypeHolder*" name="holder" />
+        </parameters>
+      </method>
+      <method name="GetParameter" cname="midgard_object_get_parameter" shared="true">
+        <return-type type="const-GValue*" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+          <parameter type="const-gchar*" name="domain" />
+          <parameter type="const-gchar*" name="name" />
+        </parameters>
+      </method>
+      <method name="GetParent" cname="midgard_object_get_parent" shared="true">
+        <return-type type="MgdObject*" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+        </parameters>
+      </method>
+      <method name="GetTree" cname="midgard_object_get_tree" shared="true">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+          <parameter type="GSList*" name="tnodes" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="midgard_object_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="HasAttachments" cname="midgard_object_has_attachments" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+        </parameters>
+      </method>
+      <method name="HasDependents" cname="midgard_object_has_dependents" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+        </parameters>
+      </method>
+      <method name="HasParameters" cname="midgard_object_has_parameters" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+        </parameters>
+      </method>
+      <method name="IsApproved" cname="midgard_object_is_approved" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+        </parameters>
+      </method>
+      <method name="IsInParentTree" cname="midgard_object_is_in_parent_tree" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+          <parameter type="guint" name="rootid" />
+          <parameter type="guint" name="id" />
+        </parameters>
+      </method>
+      <method name="IsInTree" cname="midgard_object_is_in_tree" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+          <parameter type="guint" name="rootid" />
+          <parameter type="guint" name="id" />
+        </parameters>
+      </method>
+      <method name="IsLocked" cname="midgard_object_is_locked" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+        </parameters>
+      </method>
+      <method name="List" cname="midgard_object_list" shared="true">
+        <return-type type="GObject**" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+          <parameter type="MidgardTypeHolder*" name="holder" />
+        </parameters>
+      </method>
+      <method name="ListAttachments" cname="midgard_object_list_attachments" shared="true">
+        <return-type type="MgdObject**" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+        </parameters>
+      </method>
+      <method name="ListChildren" cname="midgard_object_list_children" shared="true">
+        <return-type type="GObject**" />
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+          <parameter type="const-gchar*" name="childname" />
+          <parameter type="MidgardTypeHolder*" name="holder" />
+        </parameters>
+      </method>
+      <method name="ListParameters" cname="midgard_object_list_parameters" shared="true">
+        <return-type type="MgdObject**" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+          <parameter type="const-gchar*" name="domain" />
+        </parameters>
+      </method>
+      <method name="Lock" cname="midgard_object_lock" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+        </parameters>
+      </method>
+      <constructor cname="midgard_object_new">
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="GValue*" name="value" />
+        </parameters>
+      </constructor>
+      <method name="Parent" cname="midgard_object_parent" shared="true">
+        <return-type type="const-gchar*" />
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+        </parameters>
+      </method>
+      <method name="Purge" cname="midgard_object_purge" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+        </parameters>
+      </method>
+      <method name="PurgeAttachments" cname="midgard_object_purge_attachments" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+          <parameter type="gboolean" name="delete_blob" />
+          <parameter type="guint" name="n_params" />
+          <parameter type="const-GParameter*" name="parameters" />
+        </parameters>
+      </method>
+      <method name="PurgeParameters" cname="midgard_object_purge_parameters" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+          <parameter type="guint" name="n_params" />
+          <parameter type="const-GParameter*" name="parameters" />
+        </parameters>
+      </method>
+      <method name="SetConnection" cname="midgard_object_set_connection" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+          <parameter type="MidgardConnection*" name="mgd" />
+        </parameters>
+      </method>
+      <method name="SetGuid" cname="midgard_object_set_guid" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+          <parameter type="const-gchar*" name="guid" />
+        </parameters>
+      </method>
+      <method name="SetParameter" cname="midgard_object_set_parameter" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+          <parameter type="const-gchar*" name="domain" />
+          <parameter type="const-gchar*" name="name" />
+          <parameter type="GValue*" name="value" />
+          <parameter type="gboolean" name="lang" />
+        </parameters>
+      </method>
+      <method name="Unapprove" cname="midgard_object_unapprove" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+        </parameters>
+      </method>
+      <method name="Undelete" cname="midgard_object_undelete" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MidgardConnection*" name="mgd" />
+          <parameter type="const-gchar*" name="guid" />
+        </parameters>
+      </method>
+      <method name="Unlock" cname="midgard_object_unlock" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="self" />
+        </parameters>
+      </method>
+      <method name="Update" cname="midgard_object_update" shared="true">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MgdObject*" name="object" />
+        </parameters>
+      </method>
+    </struct>
+    <struct name="Schema" cname="MidgardSchema">
+      <field name="Parent" cname="parent" type="GObject" />
+      <field name="Types" cname="types" type="GHashTable*" />
+      <method name="GetType" cname="midgard_schema_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="Init" cname="midgard_schema_init">
+        <return-type type="void" />
+      </method>
+      <method name="ReadDir" cname="midgard_schema_read_dir">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="dirname" />
+        </parameters>
+      </method>
+      <method name="ReadFile" cname="midgard_schema_read_file">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="filename" />
+        </parameters>
+      </method>
+      <method name="TypeExists" cname="midgard_schema_type_exists">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="classname" />
+        </parameters>
+      </method>
+    </struct>
+    <struct name="Timestamp" cname="MidgardTimestamp" opaque="true">
+      <field name="Year" cname="year" type="glong" access="public" writeable="true" />
+      <field name="Month" cname="month" type="gint" access="public" writeable="true" />
+      <field name="Day" cname="day" type="gint" access="public" writeable="true" />
+      <field name="Hour" cname="hour" type="gint" access="public" writeable="true" />
+      <field name="Minute" cname="minute" type="gint" access="public" writeable="true" />
+      <field name="Second" cname="second" type="gint" access="public" writeable="true" />
+      <field name="Nano" cname="nano" type="gulong" access="public" writeable="true" />
+      <field name="Offset" cname="offset" type="glong" access="public" writeable="true" />
+      <field name="DateValue" cname="date_value" type="guint64" access="public" writeable="true" />
+      <field name="DateString" cname="date_string" type="gchar*" access="public" writeable="true" />
+      <method name="GetString" cname="midgard_timestamp_get_string" shared="true">
+        <return-type type="gchar*" />
+        <parameters>
+          <parameter type="const-GValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="GetType" cname="midgard_timestamp_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <constructor cname="midgard_timestamp_new" />
+      <constructor cname="midgard_timestamp_new_current" />
+      <constructor cname="midgard_timestamp_new_from_iso8601">
+        <parameters>
+          <parameter type="const-gchar*" name="iso_date" />
+        </parameters>
+      </constructor>
+      <constructor cname="midgard_timestamp_new_value_from_iso8601">
+        <parameters>
+          <parameter type="const-gchar*" name="iso_date" />
+        </parameters>
+      </constructor>
+      <method name="SetCurrentTime" cname="midgard_timestamp_set_current_time" shared="true">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-GValue*" name="value" />
+        </parameters>
+      </method>
+    </struct>
+    <struct name="TypeHolder" cname="MidgardTypeHolder">
+      <field name="Elements" cname="elements" type="guint" />
+      <field name="Level" cname="level" type="guint" />
+    </struct>
+    <struct name="MgdUserinfo" cname="mgd_userinfo" opaque="true" />
+    <struct name="MidgardQueryBuilder" cname="midgard_query_builder">
+      <field name="Parent" cname="parent" type="GObject" />
+      <field name="Priv" cname="priv" type="MidgardQueryBuilderPrivate*" />
+    </struct>
+    <struct name="Qlimit" cname="qlimit" opaque="true" />
+  </namespace>
+</api>

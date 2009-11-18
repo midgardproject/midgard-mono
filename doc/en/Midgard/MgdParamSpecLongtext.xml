@@ -1,0 +1,26 @@
+<Type Name="MgdParamSpecLongtext" FullName="Midgard.MgdParamSpecLongtext">
+  <TypeSignature Language="C#" Value="public class MgdParamSpecLongtext" />
+  <AssemblyInfo>
+    <AssemblyName>midgard-sharp</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MgdParamSpecLongtext ();" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

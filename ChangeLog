@@ -1,0 +1,7 @@
+2008-04-18  Everaldo Canuto  <everaldo.canuto@gmail.com>
+
+	* configure.in: Change GTKSHARP_PREFIX to be upper case.
+
+2007-03-12  Everaldo Canuto  <everaldo.canuto@gmail.com>
+
+	Initial Import.

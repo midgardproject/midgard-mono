@@ -1,0 +1,18 @@
+This package was debianized by Everaldo Canuto <everaldo@simios.org> on
+Sun, 25 Feb 2007 12:23:32 -0300.
+
+It was downloaded from http://www.midgard-project.org/
+
+Copyright (c) 2001-2005 Novell
+
+Upstream Bindings Author(s):
+  Everaldo Canuto <everaldo@simios.org>
+
+Upstream Core library Author(s):
+  Jukka Zitting <jukka.zitting@iki.fi>
+  Henri Bergius <henri.bergius@iki.fi>
+  and the rest of the Midgard team
+
+License:
+
+  GNU LIBRARY GENERAL PUBLIC LICENSE Version 2

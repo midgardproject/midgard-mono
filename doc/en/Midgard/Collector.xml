@@ -1,0 +1,179 @@
+<Type Name="Collector" FullName="Midgard.Collector">
+  <TypeSignature Language="C#" Value="public class Collector : Midgard.QueryBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>midgard-sharp</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Midgard.QueryBuilder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Collector (GLib.GType gtype);" />
+      <MemberType>Constructor</MemberType>
+      <Attributes><Attribute><AttributeName>System.Obsolete</AttributeName></Attribute></Attributes>
+      <Parameters><Parameter Name="gtype" Type="GLib.GType" /></Parameters>
+      <Docs><param name="gtype">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Collector (IntPtr raw);" />
+      <MemberType>Constructor</MemberType>
+      <Parameters><Parameter Name="raw" Type="System.IntPtr" /></Parameters>
+      <Docs><param name="raw">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Collector (Midgard.Connection mgd, string classname, string domain, GLib.Value value);" />
+      <MemberType>Constructor</MemberType>
+      <Parameters><Parameter Name="mgd" Type="Midgard.Connection" /><Parameter Name="classname" Type="System.String" /><Parameter Name="domain" Type="System.String" /><Parameter Name="value" Type="GLib.Value" /></Parameters>
+      <Docs><param name="mgd">To be added.</param><param name="classname">To be added.</param><param name="domain">To be added.</param><param name="value">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="AddConstraint">
+      <MemberSignature Language="C#" Value="public bool AddConstraint (string name, string op, GLib.Value value);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="name" Type="System.String" /><Parameter Name="op" Type="System.String" /><Parameter Name="value" Type="GLib.Value" /></Parameters>
+      <Docs><param name="name">To be added.</param><param name="op">To be added.</param><param name="value">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="AddConstraintWithProperty">
+      <MemberSignature Language="C#" Value="public bool AddConstraintWithProperty (string property_a, string op, string property_b);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="property_a" Type="System.String" /><Parameter Name="op" Type="System.String" /><Parameter Name="property_b" Type="System.String" /></Parameters>
+      <Docs><param name="property_a">To be added.</param><param name="op">To be added.</param><param name="property_b">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="AddOrder">
+      <MemberSignature Language="C#" Value="public bool AddOrder (string name, string dir);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="name" Type="System.String" /><Parameter Name="dir" Type="System.String" /></Parameters>
+      <Docs><param name="name">To be added.</param><param name="dir">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="AddValueProperty">
+      <MemberSignature Language="C#" Value="public bool AddValueProperty (string value);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="value" Type="System.String" /></Parameters>
+      <Docs><param name="value">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="BeginGroup">
+      <MemberSignature Language="C#" Value="public bool BeginGroup (string type);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="type" Type="System.String" /></Parameters>
+      <Docs><param name="type">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public void Count ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Void</ReturnType></ReturnValue>
+      <Parameters />
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Destroy">
+      <MemberSignature Language="C#" Value="public void Destroy ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Void</ReturnType></ReturnValue>
+      <Parameters />
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="EndGroup">
+      <MemberSignature Language="C#" Value="public bool EndGroup ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters />
+      <Docs><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public bool Execute ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters />
+      <Docs><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public IntPtr Get (string key);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.IntPtr</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="key" Type="System.String" /></Parameters>
+      <Docs><param name="key">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="GetSubkey">
+      <MemberSignature Language="C#" Value="public GLib.Value GetSubkey (string key, string subkey);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>GLib.Value</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="key" Type="System.String" /><Parameter Name="subkey" Type="System.String" /></Parameters>
+      <Docs><param name="key">To be added.</param><param name="subkey">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="GType">
+      <MemberSignature Language="C#" Value="public static GLib.GType GType { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue><ReturnType>GLib.GType</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><value>To be added.</value><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Lang">
+      <MemberSignature Language="C#" Value="public int Lang { set; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue><ReturnType>System.Int32</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><value>To be added.</value><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Limit">
+      <MemberSignature Language="C#" Value="public uint Limit { set; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue><ReturnType>System.UInt32</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><value>To be added.</value><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="ListKeys">
+      <MemberSignature Language="C#" Value="public string ListKeys ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.String</ReturnType></ReturnValue>
+      <Parameters />
+      <Docs><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Merge">
+      <MemberSignature Language="C#" Value="public bool Merge (Midgard.Collector mc, bool overwrite);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="mc" Type="Midgard.Collector" /><Parameter Name="overwrite" Type="System.Boolean" /></Parameters>
+      <Docs><param name="mc">To be added.</param><param name="overwrite">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public uint Offset { set; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue><ReturnType>System.UInt32</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><value>To be added.</value><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="RemoveKey">
+      <MemberSignature Language="C#" Value="public bool RemoveKey (string key);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="key" Type="System.String" /></Parameters>
+      <Docs><param name="key">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public bool Set (string key, string subkey, GLib.Value value);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="key" Type="System.String" /><Parameter Name="subkey" Type="System.String" /><Parameter Name="value" Type="GLib.Value" /></Parameters>
+      <Docs><param name="key">To be added.</param><param name="subkey">To be added.</param><param name="value">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="SetKeyProperty">
+      <MemberSignature Language="C#" Value="public bool SetKeyProperty (string key, GLib.Value value);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="key" Type="System.String" /><Parameter Name="value" Type="GLib.Value" /></Parameters>
+      <Docs><param name="key">To be added.</param><param name="value">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="UnsetLanguages">
+      <MemberSignature Language="C#" Value="public void UnsetLanguages ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Void</ReturnType></ReturnValue>
+      <Parameters />
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member>
+  </Members>
+</Type>

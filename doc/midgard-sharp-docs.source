@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<monodoc>
+  <source provider="ecma" basefile="midgard-sharp-docs" path="classlib-midgard"/>
+</monodoc>

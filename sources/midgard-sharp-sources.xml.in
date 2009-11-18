@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<gapi-parser-input>
+  <api filename="../midgard/midgard-api.raw">
+    <library name="libmidgard-2.0">
+      <namespace name="Midgard">
+        <dir>@MIDGARD_INCLUDES@/midgard-2.0/midgard</dir>
+      </namespace>
+    </library>
+  </api>
+</gapi-parser-input>
