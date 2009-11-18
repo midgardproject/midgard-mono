@@ -1,0 +1,9 @@
+prefix=@prefix@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+
+Name: Midgard#
+Description: Midgard# - Midgard bindings for Mono
+Version: @VERSION@
+Requires: glib-sharp-2.0
+Libs: -r:${prefix}/lib/mono/midgard-sharp/midgard-sharp.dll

@@ -1,0 +1,16 @@
+Source: midgard-sharp
+Section: libs
+Priority: optional
+Maintainer: Everaldo Canuto <everaldo@simios.org>
+Binary:
+Build-Depends: debhelper (>= 4.0.0), mono-devel, libmidgard2-dev
+Architecture: any
+Standards-Version: 3.6.1
+
+Package: midgard-sharp
+Architecture: all
+Depends: mono-runtime, midgard2-common
+Description: CLI binding for the Midgard
+ This package provides assemblies that allow CLI (.NET/Mono) programs to use
+ the Midgard core libraries.
+

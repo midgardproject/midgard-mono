@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<metadata>
+	<attr path="/api/namespace/object[@cname='midgard']" name="name">Context</attr>
+
+	<remove-node path="/api/namespace/object[@cname='MidgardQueryBuilder']/method[@cname='midgard_query_builder_get_type_name']" />
+	<remove-node path="/api/namespace/object[@cname='MidgardReflectionProperty']" />
+
+	<remove-node path="/api/namespace/struct[@cname='midgard_collector']" />
+	<remove-node path="/api/namespace/struct[@cname='midgard_config']" />
+	<remove-node path="/api/namespace/struct[@cname='midgard_connection']" />
+	<remove-node path="/api/namespace/struct[@cname='midgard_dbobject']" />
+	<remove-node path="/api/namespace/struct[@cname='midgard_mysql']" />
+	<remove-node path="/api/namespace/struct[@cname='midgard_object']" />
+	<remove-node path="/api/namespace/struct[@cname='midgard_queryBuilder']" />
+	<remove-node path="/api/namespace/struct[@cname='midgard_replicator']" />
+	<remove-node path="/api/namespace/struct[@cname='midgard_res']" />
+	<remove-node path="/api/namespace/struct[@cname='midgard_sitegroup']" />
+	<remove-node path="/api/namespace/struct[@cname='midgard_user']" />
+
+</metadata>

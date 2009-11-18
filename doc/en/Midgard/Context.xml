@@ -1,0 +1,226 @@
+<Type Name="Context" FullName="Midgard.Context">
+  <TypeSignature Language="C#" Value="public class Context" />
+  <AssemblyInfo>
+    <AssemblyName>midgard-sharp</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Context ();" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="ErrorGeneric">
+      <MemberSignature Language="C#" Value="public static int ErrorGeneric ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Int32</ReturnType></ReturnValue>
+      <Parameters />
+      <Docs><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="ErrorParseLoglevel">
+      <MemberSignature Language="C#" Value="public static int ErrorParseLoglevel (string levelstring);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Int32</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="levelstring" Type="System.String" /></Parameters>
+      <Docs><param name="levelstring">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="GetMidgard">
+      <MemberSignature Language="C#" Value="public static void GetMidgard (Midgard.MgdObject mobj, Midgard.Connection mgd);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Void</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="mobj" Type="Midgard.MgdObject" /><Parameter Name="mgd" Type="Midgard.Connection" /></Parameters>
+      <Docs><param name="mobj">To be added.</param><param name="mgd">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="GuidExternal">
+      <MemberSignature Language="C#" Value="public static string GuidExternal (Midgard.Connection mgd, string external);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.String</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="mgd" Type="Midgard.Connection" /><Parameter Name="external" Type="System.String" /></Parameters>
+      <Docs><param name="mgd">To be added.</param><param name="external">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="GuidGetType">
+      <MemberSignature Language="C#" Value="public static GLib.GType GuidGetType ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>GLib.GType</ReturnType></ReturnValue>
+      <Parameters />
+      <Docs><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="GuidNew">
+      <MemberSignature Language="C#" Value="public static string GuidNew (Midgard.Connection mgd);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.String</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="mgd" Type="Midgard.Connection" /></Parameters>
+      <Docs><param name="mgd">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="HashStringsNew">
+      <MemberSignature Language="C#" Value="public static IntPtr HashStringsNew ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.IntPtr</ReturnType></ReturnValue>
+      <Parameters />
+      <Docs><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="ImportObject">
+      <MemberSignature Language="C#" Value="public static bool ImportObject (Midgard.Connection mgd, string xml);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="mgd" Type="Midgard.Connection" /><Parameter Name="xml" Type="System.String" /></Parameters>
+      <Docs><param name="mgd">To be added.</param><param name="xml">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public static void Init ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Void</ReturnType></ReturnValue>
+      <Parameters />
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="IsGuid">
+      <MemberSignature Language="C#" Value="public static bool IsGuid (string guid);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="guid" Type="System.String" /></Parameters>
+      <Docs><param name="guid">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="IsUuid">
+      <MemberSignature Language="C#" Value="public static bool IsUuid (string uuid);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="uuid" Type="System.String" /></Parameters>
+      <Docs><param name="uuid">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="LongtextGetType">
+      <MemberSignature Language="C#" Value="public static GLib.GType LongtextGetType ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>GLib.GType</ReturnType></ReturnValue>
+      <Parameters />
+      <Docs><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="ParamLongtextGetType">
+      <MemberSignature Language="C#" Value="public static GLib.GType ParamLongtextGetType ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>GLib.GType</ReturnType></ReturnValue>
+      <Parameters />
+      <Docs><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="QuotaCreate">
+      <MemberSignature Language="C#" Value="public static bool QuotaCreate (Midgard.MgdObject objekt);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="QuotaGetObjectSize">
+      <MemberSignature Language="C#" Value="public static uint QuotaGetObjectSize (Midgard.MgdObject objekt);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.UInt32</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="QuotaGetSitegroupSize">
+      <MemberSignature Language="C#" Value="public static uint QuotaGetSitegroupSize (Midgard.Connection mgd, uint sg);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.UInt32</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="mgd" Type="Midgard.Connection" /><Parameter Name="sg" Type="System.UInt32" /></Parameters>
+      <Docs><param name="mgd">To be added.</param><param name="sg">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="QuotaGetTypeSize">
+      <MemberSignature Language="C#" Value="public static uint QuotaGetTypeSize (Midgard.Connection mgd, string typename);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.UInt32</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="mgd" Type="Midgard.Connection" /><Parameter Name="typename" Type="System.String" /></Parameters>
+      <Docs><param name="mgd">To be added.</param><param name="typename">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="QuotaRemove">
+      <MemberSignature Language="C#" Value="public static void QuotaRemove (Midgard.MgdObject objekt, uint size);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Void</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /><Parameter Name="size" Type="System.UInt32" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><param name="size">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="QuotaSetSitegroupSize">
+      <MemberSignature Language="C#" Value="public static void QuotaSetSitegroupSize (Midgard.Connection mgd, uint sitegroup, uint size, uint records);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Void</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="mgd" Type="Midgard.Connection" /><Parameter Name="sitegroup" Type="System.UInt32" /><Parameter Name="size" Type="System.UInt32" /><Parameter Name="records" Type="System.UInt32" /></Parameters>
+      <Docs><param name="mgd">To be added.</param><param name="sitegroup">To be added.</param><param name="size">To be added.</param><param name="records">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="QuotaSetTypeSize">
+      <MemberSignature Language="C#" Value="public static void QuotaSetTypeSize (Midgard.Connection mgd, uint sitegroup, string typename, uint size, uint records);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Void</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="mgd" Type="Midgard.Connection" /><Parameter Name="sitegroup" Type="System.UInt32" /><Parameter Name="typename" Type="System.String" /><Parameter Name="size" Type="System.UInt32" /><Parameter Name="records" Type="System.UInt32" /></Parameters>
+      <Docs><param name="mgd">To be added.</param><param name="sitegroup">To be added.</param><param name="typename">To be added.</param><param name="size">To be added.</param><param name="records">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="QuotaSizeIsReached">
+      <MemberSignature Language="C#" Value="public static bool QuotaSizeIsReached (Midgard.MgdObject objekt, int size);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /><Parameter Name="size" Type="System.Int32" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><param name="size">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="QuotaUpdate">
+      <MemberSignature Language="C#" Value="public static bool QuotaUpdate (Midgard.MgdObject objekt, uint init_size);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /><Parameter Name="init_size" Type="System.UInt32" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><param name="init_size">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="TimestampDupString">
+      <MemberSignature Language="C#" Value="public static string TimestampDupString (GLib.Value value);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.String</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="value" Type="GLib.Value" /></Parameters>
+      <Docs><param name="value">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="TimestampGetTime">
+      <MemberSignature Language="C#" Value="public static DateTime TimestampGetTime (GLib.Value value);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.DateTime</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="value" Type="GLib.Value" /></Parameters>
+      <Docs><param name="value">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="TimestampGetType">
+      <MemberSignature Language="C#" Value="public static GLib.GType TimestampGetType ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>GLib.GType</ReturnType></ReturnValue>
+      <Parameters />
+      <Docs><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="TimestampSetString">
+      <MemberSignature Language="C#" Value="public static void TimestampSetString (GLib.Value value, string time);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Void</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="value" Type="GLib.Value" /><Parameter Name="time" Type="System.String" /></Parameters>
+      <Docs><param name="value">To be added.</param><param name="time">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="TimestampSetTime">
+      <MemberSignature Language="C#" Value="public static void TimestampSetTime (GLib.Value value, DateTime time);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Void</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="value" Type="GLib.Value" /><Parameter Name="time" Type="System.DateTime" /></Parameters>
+      <Docs><param name="value">To be added.</param><param name="time">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="UuidExternal">
+      <MemberSignature Language="C#" Value="public static string UuidExternal (string external);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.String</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="external" Type="System.String" /></Parameters>
+      <Docs><param name="external">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="UuidNew">
+      <MemberSignature Language="C#" Value="public static string UuidNew ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.String</ReturnType></ReturnValue>
+      <Parameters />
+      <Docs><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member>
+  </Members>
+</Type>

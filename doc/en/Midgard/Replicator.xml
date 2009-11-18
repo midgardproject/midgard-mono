@@ -1,0 +1,105 @@
+<Type Name="Replicator" FullName="Midgard.Replicator">
+  <TypeSignature Language="C#" Value="public class Replicator : GLib.Object" />
+  <AssemblyInfo>
+    <AssemblyName>midgard-sharp</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Replicator (GLib.GType gtype);" />
+      <MemberType>Constructor</MemberType>
+      <Attributes><Attribute><AttributeName>System.Obsolete</AttributeName></Attribute></Attributes>
+      <Parameters><Parameter Name="gtype" Type="GLib.GType" /></Parameters>
+      <Docs><param name="gtype">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Replicator (Midgard.MgdObject objekt);" />
+      <MemberType>Constructor</MemberType>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Replicator (IntPtr raw);" />
+      <MemberType>Constructor</MemberType>
+      <Parameters><Parameter Name="raw" Type="System.IntPtr" /></Parameters>
+      <Docs><param name="raw">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Export">
+      <MemberSignature Language="C#" Value="public bool Export (Midgard.MgdObject objekt);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="ExportBlob">
+      <MemberSignature Language="C#" Value="public string ExportBlob (Midgard.MgdObject objekt);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.String</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="ExportByGuid">
+      <MemberSignature Language="C#" Value="public static bool ExportByGuid (Midgard.Connection mgd, string guid);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="mgd" Type="Midgard.Connection" /><Parameter Name="guid" Type="System.String" /></Parameters>
+      <Docs><param name="mgd">To be added.</param><param name="guid">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="ExportMedia">
+      <MemberSignature Language="C#" Value="public string ExportMedia (Midgard.MgdObject objekt);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.String</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="GType">
+      <MemberSignature Language="C#" Value="public static GLib.GType GType { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue><ReturnType>GLib.GType</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><value>To be added.</value><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="ImportFromXml">
+      <MemberSignature Language="C#" Value="public void ImportFromXml (Midgard.Connection mgd, string xml, bool force);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Void</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="mgd" Type="Midgard.Connection" /><Parameter Name="xml" Type="System.String" /><Parameter Name="force" Type="System.Boolean" /></Parameters>
+      <Docs><param name="mgd">To be added.</param><param name="xml">To be added.</param><param name="force">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="ImportObject">
+      <MemberSignature Language="C#" Value="public bool ImportObject (Midgard.MgdObject objekt, bool force);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /><Parameter Name="force" Type="System.Boolean" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><param name="force">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public string Serialize (Midgard.MgdObject objekt);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.String</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="SerializeBlob">
+      <MemberSignature Language="C#" Value="public string SerializeBlob (Midgard.MgdObject objekt);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.String</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Unserialize">
+      <MemberSignature Language="C#" Value="public GLib.Object Unserialize (Midgard.Connection mgd, string xml, bool force);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>GLib.Object</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="mgd" Type="Midgard.Connection" /><Parameter Name="xml" Type="System.String" /><Parameter Name="force" Type="System.Boolean" /></Parameters>
+      <Docs><param name="mgd">To be added.</param><param name="xml">To be added.</param><param name="force">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member>
+  </Members>
+</Type>

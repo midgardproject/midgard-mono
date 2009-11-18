@@ -1,0 +1,178 @@
+<Type Name="MgdErrorGeneric" FullName="Midgard.MgdErrorGeneric">
+  <TypeSignature Language="C#" Value="public enum MgdErrorGeneric" />
+  <AssemblyInfo>
+    <AssemblyName>midgard-sharp</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Member MemberName="AccessDenied">
+      <MemberSignature Language="C#" Value="AccessDenied" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="Duplicate">
+      <MemberSignature Language="C#" Value="Duplicate" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="Error">
+      <MemberSignature Language="C#" Value="Error" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="HasDependants">
+      <MemberSignature Language="C#" Value="HasDependants" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="Internal">
+      <MemberSignature Language="C#" Value="Internal" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="InvalidName">
+      <MemberSignature Language="C#" Value="InvalidName" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="InvalidObject">
+      <MemberSignature Language="C#" Value="InvalidObject" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="InvalidProperty">
+      <MemberSignature Language="C#" Value="InvalidProperty" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="InvalidPropertyValue">
+      <MemberSignature Language="C#" Value="InvalidPropertyValue" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="MissedDependence">
+      <MemberSignature Language="C#" Value="MissedDependence" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="NotConnected">
+      <MemberSignature Language="C#" Value="NotConnected" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="NotExists">
+      <MemberSignature Language="C#" Value="NotExists" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="NotObject">
+      <MemberSignature Language="C#" Value="NotObject" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="ObjectDeleted">
+      <MemberSignature Language="C#" Value="ObjectDeleted" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="ObjectExported">
+      <MemberSignature Language="C#" Value="ObjectExported" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="ObjectImported">
+      <MemberSignature Language="C#" Value="ObjectImported" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="ObjectNameExists">
+      <MemberSignature Language="C#" Value="ObjectNameExists" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="ObjectNoParent">
+      <MemberSignature Language="C#" Value="ObjectNoParent" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="ObjectNoStorage">
+      <MemberSignature Language="C#" Value="ObjectNoStorage" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="ObjectPurged">
+      <MemberSignature Language="C#" Value="ObjectPurged" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="Ok">
+      <MemberSignature Language="C#" Value="Ok" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="Quota">
+      <MemberSignature Language="C#" Value="Quota" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="Range">
+      <MemberSignature Language="C#" Value="Range" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="SgNotfound">
+      <MemberSignature Language="C#" Value="SgNotfound" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="SitegroupViolation">
+      <MemberSignature Language="C#" Value="SitegroupViolation" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="TreeIsCircular">
+      <MemberSignature Language="C#" Value="TreeIsCircular" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="UserData">
+      <MemberSignature Language="C#" Value="UserData" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdErrorGeneric</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member>
+  </Members>
+</Type>

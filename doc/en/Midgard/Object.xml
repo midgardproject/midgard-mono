@@ -1,0 +1,244 @@
+<Type Name="Object" FullName="Midgard.Object">
+  <TypeSignature Language="C#" Value="public class Object : GLib.Opaque" />
+  <AssemblyInfo>
+    <AssemblyName>midgard-sharp</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.Opaque</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Object (IntPtr raw);" />
+      <MemberType>Constructor</MemberType>
+      <Parameters><Parameter Name="raw" Type="System.IntPtr" /></Parameters>
+      <Docs><param name="raw">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Object (Midgard.Connection mgd, string name, GLib.Value value);" />
+      <MemberType>Constructor</MemberType>
+      <Parameters><Parameter Name="mgd" Type="Midgard.Connection" /><Parameter Name="name" Type="System.String" /><Parameter Name="value" Type="GLib.Value" /></Parameters>
+      <Docs><param name="mgd">To be added.</param><param name="name">To be added.</param><param name="value">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Object (Midgard.Connection mgd, string name, string id);" />
+      <MemberType>Constructor</MemberType>
+      <Parameters><Parameter Name="mgd" Type="Midgard.Connection" /><Parameter Name="name" Type="System.String" /><Parameter Name="id" Type="System.String" /></Parameters>
+      <Docs><param name="mgd">To be added.</param><param name="name">To be added.</param><param name="id">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="BuildPath">
+      <MemberSignature Language="C#" Value="public static string BuildPath (Midgard.MgdObject mobj);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.String</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="mobj" Type="Midgard.MgdObject" /></Parameters>
+      <Docs><param name="mobj">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="ClassGetObjectByGuid">
+      <MemberSignature Language="C#" Value="public static Midgard.MgdObject ClassGetObjectByGuid (Midgard.Connection mgd, string guid);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdObject</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="mgd" Type="Midgard.Connection" /><Parameter Name="guid" Type="System.String" /></Parameters>
+      <Docs><param name="mgd">To be added.</param><param name="guid">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="ClassGetObjectByPath">
+      <MemberSignature Language="C#" Value="public static Midgard.MgdObject ClassGetObjectByPath (Midgard.Connection mgd, string classname, string object_path);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdObject</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="mgd" Type="Midgard.Connection" /><Parameter Name="classname" Type="System.String" /><Parameter Name="object_path" Type="System.String" /></Parameters>
+      <Docs><param name="mgd">To be added.</param><param name="classname">To be added.</param><param name="object_path">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="ClassUndelete">
+      <MemberSignature Language="C#" Value="public static bool ClassUndelete (Midgard.Connection mgd, string guid);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="mgd" Type="Midgard.Connection" /><Parameter Name="guid" Type="System.String" /></Parameters>
+      <Docs><param name="mgd">To be added.</param><param name="guid">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static bool Create (Midgard.MgdObject objekt);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="CreateAttachment">
+      <MemberSignature Language="C#" Value="public static Midgard.MgdObject CreateAttachment (Midgard.MgdObject self, string name, string title, string mimetype);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdObject</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="self" Type="Midgard.MgdObject" /><Parameter Name="name" Type="System.String" /><Parameter Name="title" Type="System.String" /><Parameter Name="mimetype" Type="System.String" /></Parameters>
+      <Docs><param name="self">To be added.</param><param name="name">To be added.</param><param name="title">To be added.</param><param name="mimetype">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public static bool Delete (Midgard.MgdObject objekt);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Export">
+      <MemberSignature Language="C#" Value="public static string Export (Midgard.MgdObject self);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.String</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="self" Type="Midgard.MgdObject" /></Parameters>
+      <Docs><param name="self">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public static GLib.Object Find (Midgard.MgdObject objekt, Midgard.TypeHolder holder);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>GLib.Object</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /><Parameter Name="holder" Type="Midgard.TypeHolder" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><param name="holder">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public static int Get (Midgard.MgdObject objekt);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Int32</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="GetByGuid">
+      <MemberSignature Language="C#" Value="public static bool GetByGuid (Midgard.MgdObject objekt, string guid);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /><Parameter Name="guid" Type="System.String" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><param name="guid">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="GetById">
+      <MemberSignature Language="C#" Value="public static bool GetById (Midgard.MgdObject objekt, uint id);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /><Parameter Name="id" Type="System.UInt32" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><param name="id">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="GetByOldGuid">
+      <MemberSignature Language="C#" Value="public static Midgard.MgdObject GetByOldGuid (Midgard.Connection mgd, string guid);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdObject</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="mgd" Type="Midgard.Connection" /><Parameter Name="guid" Type="System.String" /></Parameters>
+      <Docs><param name="mgd">To be added.</param><param name="guid">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="GetByPath">
+      <MemberSignature Language="C#" Value="public static bool GetByPath (Midgard.MgdObject self, string path);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="self" Type="Midgard.MgdObject" /><Parameter Name="path" Type="System.String" /></Parameters>
+      <Docs><param name="self">To be added.</param><param name="path">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="GetLanguages">
+      <MemberSignature Language="C#" Value="public static GLib.Object GetLanguages (Midgard.MgdObject self, Midgard.TypeHolder holder);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>GLib.Object</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="self" Type="Midgard.MgdObject" /><Parameter Name="holder" Type="Midgard.TypeHolder" /></Parameters>
+      <Docs><param name="self">To be added.</param><param name="holder">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="GetParent">
+      <MemberSignature Language="C#" Value="public static Midgard.MgdObject GetParent (Midgard.MgdObject objekt);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdObject</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="GetTree">
+      <MemberSignature Language="C#" Value="public static string GetTree (Midgard.MgdObject objekt, GLib.SList tnodes);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.String</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /><Parameter Name="tnodes" Type="GLib.SList" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><param name="tnodes">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="GType">
+      <MemberSignature Language="C#" Value="public static GLib.GType GType { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue><ReturnType>GLib.GType</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><value>To be added.</value><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="IsInParentTree">
+      <MemberSignature Language="C#" Value="public static bool IsInParentTree (Midgard.MgdObject objekt, uint rootid, uint id);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /><Parameter Name="rootid" Type="System.UInt32" /><Parameter Name="id" Type="System.UInt32" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><param name="rootid">To be added.</param><param name="id">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="IsInTree">
+      <MemberSignature Language="C#" Value="public static bool IsInTree (Midgard.MgdObject objekt, uint rootid, uint id);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /><Parameter Name="rootid" Type="System.UInt32" /><Parameter Name="id" Type="System.UInt32" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><param name="rootid">To be added.</param><param name="id">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="List">
+      <MemberSignature Language="C#" Value="public static GLib.Object List (Midgard.MgdObject objekt, Midgard.TypeHolder holder);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>GLib.Object</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /><Parameter Name="holder" Type="Midgard.TypeHolder" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><param name="holder">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="ListAttachments">
+      <MemberSignature Language="C#" Value="public static Midgard.MgdObject ListAttachments (Midgard.MgdObject self);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdObject</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="self" Type="Midgard.MgdObject" /></Parameters>
+      <Docs><param name="self">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="ListChildren">
+      <MemberSignature Language="C#" Value="public static GLib.Object ListChildren (Midgard.MgdObject objekt, string childname, Midgard.TypeHolder holder);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>GLib.Object</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /><Parameter Name="childname" Type="System.String" /><Parameter Name="holder" Type="Midgard.TypeHolder" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><param name="childname">To be added.</param><param name="holder">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="ListParameters">
+      <MemberSignature Language="C#" Value="public static Midgard.MgdObject ListParameters (Midgard.MgdObject self, string domain);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>Midgard.MgdObject</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="self" Type="Midgard.MgdObject" /><Parameter Name="domain" Type="System.String" /></Parameters>
+      <Docs><param name="self">To be added.</param><param name="domain">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Purge">
+      <MemberSignature Language="C#" Value="public static bool Purge (Midgard.MgdObject objekt);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="SetConnection">
+      <MemberSignature Language="C#" Value="public static void SetConnection (Midgard.MgdObject self, Midgard.Connection mgd);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Void</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="self" Type="Midgard.MgdObject" /><Parameter Name="mgd" Type="Midgard.Connection" /></Parameters>
+      <Docs><param name="self">To be added.</param><param name="mgd">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="SetGuid">
+      <MemberSignature Language="C#" Value="public static bool SetGuid (Midgard.MgdObject self, string guid);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="self" Type="Midgard.MgdObject" /><Parameter Name="guid" Type="System.String" /></Parameters>
+      <Docs><param name="self">To be added.</param><param name="guid">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="SetParameter">
+      <MemberSignature Language="C#" Value="public static bool SetParameter (Midgard.MgdObject self, string domain, string name, GLib.Value value, bool lang);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="self" Type="Midgard.MgdObject" /><Parameter Name="domain" Type="System.String" /><Parameter Name="name" Type="System.String" /><Parameter Name="value" Type="GLib.Value" /><Parameter Name="lang" Type="System.Boolean" /></Parameters>
+      <Docs><param name="self">To be added.</param><param name="domain">To be added.</param><param name="name">To be added.</param><param name="value">To be added.</param><param name="lang">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Undelete">
+      <MemberSignature Language="C#" Value="public static bool Undelete (Midgard.Connection mgd, string guid);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="mgd" Type="Midgard.Connection" /><Parameter Name="guid" Type="System.String" /></Parameters>
+      <Docs><param name="mgd">To be added.</param><param name="guid">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member><Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public static bool Update (Midgard.MgdObject objekt);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="objekt" Type="Midgard.MgdObject" /></Parameters>
+      <Docs><param name="objekt">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
+    </Member>
+  </Members>
+</Type>
