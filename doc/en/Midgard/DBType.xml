@@ -1,0 +1,52 @@
+<Type Name="DBType" FullName="Midgard.DBType">
+  <TypeSignature Language="C#" Value="public enum DBType" />
+  <AssemblyInfo>
+    <AssemblyName>midgard-sharp</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    
+    
+    
+    
+    
+    <Member MemberName="Freetds">
+      <MemberSignature Language="C#" Value="Freetds" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.DBType</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="Mysql">
+      <MemberSignature Language="C#" Value="Mysql" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.DBType</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="Odbc">
+      <MemberSignature Language="C#" Value="Odbc" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.DBType</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="Oracle">
+      <MemberSignature Language="C#" Value="Oracle" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.DBType</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="Postgres">
+      <MemberSignature Language="C#" Value="Postgres" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.DBType</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="Sqlite">
+      <MemberSignature Language="C#" Value="Sqlite" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.DBType</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member>
+  </Members>
+</Type>

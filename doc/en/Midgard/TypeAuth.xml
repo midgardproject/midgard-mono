@@ -1,0 +1,34 @@
+<Type Name="TypeAuth" FullName="Midgard.TypeAuth">
+  <TypeSignature Language="C#" Value="public enum TypeAuth" />
+  <AssemblyInfo>
+    <AssemblyName>midgard-sharp</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    
+    
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.TypeAuth</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="Pam">
+      <MemberSignature Language="C#" Value="Pam" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.TypeAuth</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member><Member MemberName="Trust">
+      <MemberSignature Language="C#" Value="Trust" />
+      <MemberType>Field</MemberType>
+      <ReturnValue><ReturnType>Midgard.TypeAuth</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary></Docs>
+    </Member>
+  </Members>
+</Type>

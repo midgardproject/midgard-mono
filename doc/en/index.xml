@@ -1,0 +1,67 @@
+<Overview>
+  <Assemblies>
+    <Assembly Name="midgard-sharp" Version="1.0.0.0">
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCopyright("2006 Midgard Team")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCompany("Midgard Project")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyDescription("Midgard bindings for Mono")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTitle("Midgard#")</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Assembly>
+  </Assemblies>
+  <Remarks>To be added.</Remarks>
+  <Copyright>To be added.</Copyright>
+  <Types>
+    <Namespace Name="GtkSharp.MidgardSharp">
+      <Type Name="ObjectManager" />
+    </Namespace>
+    <Namespace Name="Midgard">
+      <Type Name="Blob" />
+      <Type Name="Collector" />
+      <Type Name="Config" />
+      <Type Name="Connection" />
+      <Type Name="ConnectionCache" />
+      <Type Name="Context" />
+      <Type Name="DBObject" />
+      <Type Name="DBType" />
+      <Type Name="Dbus" />
+      <Type Name="HttpHost" />
+      <Type Name="Metadata" />
+      <Type Name="MgdErrorGeneric" />
+      <Type Name="MgdObject" />
+      <Type Name="MgdParamSpecLongtext" />
+      <Type Name="MgdSchema" />
+      <Type Name="MgdSchemaTypeAttr" />
+      <Type Name="MgdUserinfo" />
+      <Type Name="MidgardConfig" />
+      <Type Name="MidgardConnection" />
+      <Type Name="MidgardDbobject" />
+      <Type Name="MidgardMysql" />
+      <Type Name="MidgardObject" />
+      <Type Name="MidgardQueryBuilder" />
+      <Type Name="MidgardReplicator" />
+      <Type Name="MidgardRes" />
+      <Type Name="MidgardSitegroup" />
+      <Type Name="MidgardUser" />
+      <Type Name="Object" />
+      <Type Name="Qlimit" />
+      <Type Name="QueryBuilder" />
+      <Type Name="Replicator" />
+      <Type Name="RequestConfig" />
+      <Type Name="Schema" />
+      <Type Name="Sitegroup" />
+      <Type Name="TypeAuth" />
+      <Type Name="TypeHolder" />
+      <Type Name="User" />
+    </Namespace>
+  </Types>
+  <Title>midgard-sharp</Title>
+</Overview>

@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# Actually GAPI dont work fine with the "extern" clause in function declarations,
+# this is script could be used to remove this externs from Midgard header files.
+#
+
+MIDGARD_INCLUDES=@MIDGARD_INCLUDES@/midgard-2.0/midgard
+
+cd $MIDGARD_INCLUDES
+
+for file in *.h; do
+  echo "$file"
+  sed -i -e 's,extern ,/*extern*/ ,' $file
+done
+

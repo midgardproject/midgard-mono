@@ -1,0 +1,10 @@
+README for Midgard# library
+
+This is the CIL (Mono/.NET) bindings for the base library of the Midgard
+Application server suite.
+
+See http://www.midgard-project.org/ or contact user@midgard-project.org
+for more information.
+
+See the INSTALL file for installation instructions.
+

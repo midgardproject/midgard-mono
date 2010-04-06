@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<metadata>
+	<attr path="/api/namespace/object[@cname='midgard']" name="name">Lib</attr>
+
+	<remove-node path="/api/namespace/object[@cname='MidgardQueryBuilder']/method[@cname='midgard_query_builder_get_type_name']" />
+	<remove-node path="/api/namespace/object[@cname='MidgardReflectionProperty']" />
+	<remove-node path="/api/namespace/object[@cname='MidgardReflectorProperty']/method[@cname='midgard_reflector_property_get_link_class']" />
+	<remove-node path="/api/namespace/struct[@cname='MidgardObjectClass']" />
+
+	<!-- MidgardObject -->
+	<!-- <attr path="/api/namespace/object[@cname='MidgardObject']" name="disable_gtype_ctor">1</attr>
+	<attr path="/api/namespace/object[@cname='MidgardObject']" name="disable_raw_ctor">1</attr> -->
+	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_list_children']" />
+	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_get_metadata_class']" />
+	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_has_metadata']" />
+	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_get_property_up']" />
+	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_get_property_parent']" />
+	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_get_property_unique']" />
+	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_get_primary_property']" />
+	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_factory']" />
+	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_get_schema_value']" />
+
+	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_purge_attachments']" />
+	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_delete_attachments']" />
+	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_find_attachments']" />
+	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_purge_parameters']" />
+	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_delete_parameters']" />
+	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_find_parameters']" />
+
+	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_parent']" />
+
+	<!-- <remove-node path="/api/namespace/object[@cname='MidgardQueryGroupConstraint']/method[@cname='midgard_query_group_constraint_add_constraint']" /> -->
+
+	<remove-node path="/api/namespace/object[@cname='Midgard']/method[@cname='midgard_set_error']" />
+
+	<remove-node path="/api/namespace/object[@cname='MidgardUser']/method[@cname='midgard_user_new']" />
+	<remove-node path="/api/namespace/object[@cname='MidgardUser']/method[@cname='midgard_user_get']" />
+	<remove-node path="/api/namespace/object[@cname='MidgardUser']/method[@cname='midgard_user_query']" />
+
+	<remove-node path="/api/namespace/object[@cname='MidgardReplicator']" />
+	<!-- <remove-node path="/api/namespace/struct[@cname='MidgardQuerySimpleConstraintIFace']" /> -->
+
+	<remove-node path="/api/namespace/object[@name='']" /> 
+
+</metadata>
