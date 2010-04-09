@@ -35,13 +35,13 @@ namespace MidgardSample
 			Midgard.QueryValue val2 = new Midgard.QueryValue (value);
 			Midgard.QueryConstraint cnstr2 = new Midgard.QueryConstraint (prop2, "=", val, null);
 
-			Midgard.QueryGroupConstraint group_constraint = new Midgard.QueryGroupConstraint ("OR", cnstr, cnstr2);
+			//Midgard.QueryGroupConstraint group_constraint = new Midgard.QueryGroupConstraint ("OR", cnstr, cnstr2);
 
-			select.SetConstraint (group_constraint);
+			//select.SetConstraint (cnstr);
 			select.Execute();
 
-			int nobjects;
-			Midgard.DBObject = select.ListObjects(out nobjects);
+			uint nobjects;
+			Midgard.DBObject objects = select.ListObjects(out nobjects);
 		}
 
 	}
