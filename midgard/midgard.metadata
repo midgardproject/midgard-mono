@@ -10,6 +10,8 @@
 	<!-- MidgardObject -->
 	<!-- <attr path="/api/namespace/object[@cname='MidgardObject']" name="disable_gtype_ctor">1</attr>
 	<attr path="/api/namespace/object[@cname='MidgardObject']" name="disable_raw_ctor">1</attr> -->
+	<attr path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_get_schema_property']/*/*/*[@name='value']" name="pass_as">out</attr>
+
 	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_list_children']" />
 	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_get_metadata_class']" />
 	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_has_metadata']" />
@@ -39,6 +41,9 @@
 
 	<remove-node path="/api/namespace/object[@cname='MidgardReplicator']" />
 	<!-- <remove-node path="/api/namespace/struct[@cname='MidgardQuerySimpleConstraintIFace']" /> -->
+
+	<!-- Midgard.QuerySelect -->
+	<attr path="/api/namespace/class[@cname='MidgardQuerySelect']/method[@cname='midgard_query_select_list_objects']/return-type" name="array">1</attr>
 
 	<remove-node path="/api/namespace/object[@name='']" /> 
 

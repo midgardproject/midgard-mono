@@ -38,10 +38,10 @@ namespace MidgardSample
 			//Midgard.QueryGroupConstraint group_constraint = new Midgard.QueryGroupConstraint ("OR", cnstr, cnstr2);
 
 			//select.SetConstraint (cnstr);
-			select.Execute();
+			select.Execute();	
 
-			uint nobjects;
-			Midgard.DBObject objects = select.ListObjects(out nobjects);
+			uint nobjects = 0;
+			Midgard.DBObject[] objects = select.ListObjects(out nobjects);
 		}
 
 	}

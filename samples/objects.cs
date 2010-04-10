@@ -25,14 +25,27 @@ namespace MidgardSample
 			GLib.Value val = new GLib.Value("");
 			Midgard.Object john = new Midgard.Object (mgd, "midgard_person", val);
 			GLib.Value name = new GLib.Value ("John");
-			//john.SetProperty ("name", name);
+			john.SetSchemaProperty ("username", name);
 
 			if (!john.Create()) {
 				Console.WriteLine ("Couldn't create person object. %s", mgd.ErrorString);
 			}
 			else {
-				//GLib.Value gval = john.GetProperty ("guid");
-				//Console.Write ("Created new person object." + (string)gval.Val);
+				GLib.Value gval = john.GetSchemaProperty ("guid");
+				Console.Write ("Created new person object." + (string)gval.Val.ToString() + "\n");
+			}
+
+			val = new GLib.Value("");
+			Midgard.Object alice = new Midgard.Object (mgd, "midgard_person", val);
+			name = new GLib.Value ("Alice");
+			alice.SetSchemaProperty ("username", name);
+
+			if (!alice.Create()) {
+				Console.WriteLine ("Couldn't create person object. %s", mgd.ErrorString);
+			}
+			else {
+				GLib.Value gval = alice.GetSchemaProperty ("guid");
+				Console.Write ("Created new person object." + (string)gval.Val + "\n");
 			}
 
 			Console.WriteLine (john);

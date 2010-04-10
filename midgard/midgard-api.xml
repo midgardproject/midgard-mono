@@ -406,39 +406,6 @@
       <property name="" cname="" type="class" />
       <property name="" cname="" type="class" />
       <property name="" cname="" type="class" />
-      <virtual_method name="ReadConfig" cname="read_config">
-        <return-type type="gboolean" />
-        <parameters>
-          <parameter type="MidgardConfig*" name="self" />
-          <parameter type="const-gchar*" name="filename" />
-          <parameter type="gboolean" name="user" />
-          <parameter type="GError**" name="error" />
-        </parameters>
-      </virtual_method>
-      <virtual_method name="SaveConfig" cname="save_config">
-        <return-type type="gboolean" />
-        <parameters>
-          <parameter type="MidgardConfig*" name="self" />
-          <parameter type="const-gchar*" name="name" />
-          <parameter type="gboolean" name="user" />
-          <parameter type="GError**" name="error" />
-        </parameters>
-      </virtual_method>
-      <virtual_method name="CreateMidgardTables" cname="create_midgard_tables">
-        <return-type type="gboolean" />
-        <parameters>
-          <parameter type="MidgardConfig*" name="self" />
-          <parameter type="MidgardConnection*" name="mgd" />
-        </parameters>
-      </virtual_method>
-      <virtual_method name="CreateClassTable" cname="create_class_table">
-        <return-type type="gboolean" />
-        <parameters>
-          <parameter type="MidgardConfig*" name="self" />
-          <parameter type="MidgardObjectClass*" name="klass" />
-          <parameter type="MidgardConnection*" name="mgd" />
-        </parameters>
-      </virtual_method>
       <method name="CreateBlobdir" cname="midgard_config_create_blobdir">
         <return-type type="gboolean" />
       </method>
@@ -915,7 +882,7 @@
       </constructor>
     </object>
     <object name="Object" cname="MidgardObject" parent="MidgardDBObject">
-      <field name="Dbpriv" cname="dbpriv" type="MidgardDBObjectPrivate*" />
+      <field name="Dbpriv" cname="dbpriv" type="//MidgardDBObjectPrivate*" />
       <field name="Priv" cname="priv" type="MidgardObjectPrivate*" />
       <field name="Metadata" cname="metadata" type="MidgardMetadata*" />
       <method name="Approve" cname="midgard_object_approve">
@@ -990,6 +957,12 @@
       </method>
       <method name="GetParent" cname="midgard_object_get_parent">
         <return-type type="MidgardObject*" />
+      </method>
+      <method name="GetSchemaProperty" cname="midgard_object_get_schema_property">
+        <return-type type="GValue*" />
+        <parameters>
+          <parameter type="const-gchar*" name="property" />
+        </parameters>
       </method>
       <method name="GetTree" cname="midgard_object_get_tree">
         <return-type type="gchar*" />
@@ -1081,6 +1054,13 @@
         <parameters>
           <parameter type="const-gchar*" name="domain" />
           <parameter type="const-gchar*" name="name" />
+          <parameter type="GValue*" name="value" />
+        </parameters>
+      </method>
+      <method name="SetSchemaProperty" cname="midgard_object_set_schema_property">
+        <return-type type="void" />
+        <parameters>
+          <parameter type="const-gchar*" name="property" />
           <parameter type="GValue*" name="value" />
         </parameters>
       </method>
@@ -1373,56 +1353,6 @@
       </method>
     </object>
     <object name="QuerySelect" cname="MidgardQuerySelect" parent="MidgardQueryExecutor">
-      <virtual_method name="SetConstraint" cname="set_constraint">
-        <return-type type="gboolean" />
-        <parameters>
-          <parameter type="MidgardQuerySelect*" name="self" />
-          <parameter type="MidgardQuerySimpleConstraint*" name="constraint" />
-        </parameters>
-      </virtual_method>
-      <virtual_method name="SetLimit" cname="set_limit">
-        <return-type type="gboolean" />
-        <parameters>
-          <parameter type="MidgardQuerySelect*" name="self" />
-          <parameter type="guint" name="limit" />
-        </parameters>
-      </virtual_method>
-      <virtual_method name="SetOffset" cname="set_offset">
-        <return-type type="gboolean" />
-        <parameters>
-          <parameter type="MidgardQuerySelect*" name="self" />
-          <parameter type="guint" name="offset" />
-        </parameters>
-      </virtual_method>
-      <virtual_method name="AddOrder" cname="add_order">
-        <return-type type="gboolean" />
-        <parameters>
-          <parameter type="MidgardQuerySelect*" name="self" />
-          <parameter type="MidgardQueryProperty*" name="property" />
-          <parameter type="const-gchar*" name="type" />
-        </parameters>
-      </virtual_method>
-      <virtual_method name="AddJoin" cname="add_join">
-        <return-type type="gboolean" />
-        <parameters>
-          <parameter type="MidgardQuerySelect*" name="self" />
-          <parameter type="const-gchar*" name="join_type" />
-          <parameter type="MidgardQueryProperty*" name="left_property" />
-          <parameter type="MidgardQueryProperty*" name="right_property" />
-        </parameters>
-      </virtual_method>
-      <virtual_method name="Execute" cname="execute">
-        <return-type type="gboolean" />
-        <parameters>
-          <parameter type="MidgardQuerySelect*" name="self" />
-        </parameters>
-      </virtual_method>
-      <virtual_method name="GetResultsCount" cname="get_results_count">
-        <return-type type="guint" />
-        <parameters>
-          <parameter type="MidgardQuerySelect*" name="self" />
-        </parameters>
-      </virtual_method>
       <virtual_method name="ListObjects" cname="list_objects">
         <return-type type="MidgardDBObject**" />
         <parameters>
