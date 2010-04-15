@@ -16,15 +16,27 @@
 					<exclude>midgard_core_metadata.h</exclude>
 					<exclude>midgard_core_metadata.c</exclude>
 					<exclude>midgard_core_object.h</exclude>
+					<exclude>midgard_core_object_class.h</exclude>
+					<exclude>midgard_core_object_class.c</exclude>
+					<exclude>midgard_core_object_parameter.c</exclude>
+					<exclude>midgard_core_object_parameter.h</exclude>
+					<exclude>midgard_core_xml.h</exclude>
+					<exclude>midgard_core_xml.c</exclude>
 					<exclude>midgard_core_query_builder.h</exclude>
 					<exclude>midgard_core_query_builder.c</exclude>
+					<exclude>midgard_core_views.h</exclude>
+					<exclude>midgard_core_views.c</exclude>
 					<exclude>query_order.h</exclude>
 					<exclude>query_order.c</exclude>
+					<exclude>query_constraint.h</exclude>
+					<exclude>query_constraint.c</exclude>
 					<exclude>schema.h</exclude>
 					<exclude>mgdschema.c</exclude>
 					<exclude>midgard_core_schema.h</exclude>
 					<exclude>query_group_constraint.h</exclude>
 					<exclude>query_group_constraint.c</exclude>
+					<exclude>simple_constraint.h</exclude>
+					<exclude>simple_constraint.c</exclude>
 				</directory>
       </namespace>
     </library>

@@ -12,16 +12,6 @@
 	<attr path="/api/namespace/object[@cname='MidgardObject']" name="disable_raw_ctor">1</attr> -->
 	<attr path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_get_schema_property']/*/*/*[@name='value']" name="pass_as">out</attr>
 
-	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_list_children']" />
-	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_get_metadata_class']" />
-	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_has_metadata']" />
-	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_get_property_up']" />
-	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_get_property_parent']" />
-	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_get_property_unique']" />
-	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_get_primary_property']" />
-	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_factory']" />
-	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_class_get_schema_value']" />
-
 	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_purge_attachments']" />
 	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_delete_attachments']" />
 	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_find_attachments']" />
