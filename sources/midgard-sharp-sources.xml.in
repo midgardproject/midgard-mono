@@ -9,6 +9,8 @@
 					<exclude>midgard_type.c</exclude>
 					<exclude>group_constraint.c</exclude>
 					<exclude>group_constraint.h</exclude>
+					<exclude>midgard_core_config.h</exclude>
+					<exclude>midgard_core_config.c</exclude>
 					<exclude>midgard_core_connection.h</exclude>
 					<exclude>midgard_core_connection.c</exclude>
 					<exclude>midgard_core_query.h</exclude>

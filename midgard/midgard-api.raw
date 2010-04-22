@@ -40,14 +40,6 @@
       <member cname="MGD_ERR_TREE_IS_CIRCULAR" name="TreeIsCircular" value="-26" />
       <member cname="MGD_ERR_OBJECT_IS_LOCKED" name="ObjectIsLocked" value="-27" />
     </enum>
-    <enum name="DBType" cname="MidgardDBType" type="enum">
-      <member cname="MIDGARD_DB_TYPE_MYSQL" name="Mysql" value="1" />
-      <member cname="MIDGARD_DB_TYPE_POSTGRES" name="Postgres" />
-      <member cname="MIDGARD_DB_TYPE_FREETDS" name="Freetds" />
-      <member cname="MIDGARD_DB_TYPE_SQLITE" name="Sqlite" />
-      <member cname="MIDGARD_DB_TYPE_ODBC" name="Odbc" />
-      <member cname="MIDGARD_DB_TYPE_ORACLE" name="Oracle" />
-    </enum>
     <enum name="ObjectAction" cname="MidgardObjectAction" type="enum">
       <member cname="MGD_OBJECT_ACTION_NONE" name="None" />
       <member cname="MGD_OBJECT_ACTION_DELETE" name="Delete" />
@@ -60,6 +52,24 @@
       <member cname="MIDGARD_AUTHTYPE_PAM" name="Pam" />
       <member cname="MIDGARD_AUTHTYPE_TRUST" name="Trust" />
     </enum>
+    <interface name="QueryConstraintSimple" cname="MidgardQueryConstraintSimple">
+      <virtual_method name="ListConstraints" cname="list_constraints">
+        <return-type type="MidgardQueryConstraintSimple**" />
+        <parameters>
+          <parameter type="MidgardQueryConstraintSimple*" name="self" />
+          <parameter type="guint*" name="n_objects" />
+        </parameters>
+      </virtual_method>
+      <method name="GetType" cname="midgard_query_constraint_simple_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="ListConstraints" cname="midgard_query_constraint_simple_list_constraints">
+        <return-type type="MidgardQueryConstraintSimple**" />
+        <parameters>
+          <parameter type="guint*" name="n_objects" />
+        </parameters>
+      </method>
+    </interface>
     <interface name="QueryHolder" cname="MidgardQueryHolder">
       <virtual_method name="GetValue" cname="get_value">
         <return-type type="void" />
@@ -88,24 +98,6 @@
         <return-type type="gboolean" />
         <parameters>
           <parameter type="const-GValue*" name="value" />
-        </parameters>
-      </method>
-    </interface>
-    <interface name="QuerySimpleConstraint" cname="MidgardQuerySimpleConstraint">
-      <virtual_method name="ListConstraints" cname="list_constraints">
-        <return-type type="MidgardQuerySimpleConstraint**" />
-        <parameters>
-          <parameter type="MidgardQuerySimpleConstraint*" name="self" />
-          <parameter type="guint*" name="n_objects" />
-        </parameters>
-      </virtual_method>
-      <method name="GetType" cname="midgard_query_simple_constraint_get_type" shared="true">
-        <return-type type="GType" />
-      </method>
-      <method name="ListConstraints" cname="midgard_query_simple_constraint_list_constraints">
-        <return-type type="MidgardQuerySimpleConstraint**" />
-        <parameters>
-          <parameter type="guint*" name="n_objects" />
         </parameters>
       </method>
     </interface>
@@ -816,12 +808,11 @@
       </method>
       <constructor cname="midgard_metadata_new">
         <parameters>
-          <parameter type="MidgardObject*" name="object" />
+          <parameter type="MidgardDBObject*" name="object" />
         </parameters>
       </constructor>
     </object>
     <object name="Object" cname="MidgardObject" parent="MidgardDBObject">
-      <field name="Dbpriv" cname="dbpriv" type="//MidgardDBObjectPrivate*" />
       <field name="Priv" cname="priv" type="MidgardObjectPrivate*" />
       <field name="Metadata" cname="metadata" type="MidgardMetadata*" />
       <method name="Approve" cname="midgard_object_approve">
@@ -1111,7 +1102,7 @@
     <object name="QueryConstraint" cname="MidgardQueryConstraint" parent="GObject">
       <field name="Priv" cname="priv" type="MidgardQueryConstraintPrivate*" />
       <implements>
-        <interface cname="MidgardQuerySimpleConstraint" />
+        <interface cname="MidgardQueryConstraintSimple" />
       </implements>
       <method name="GetOperator" cname="midgard_query_constraint_get_operator">
         <return-type type="const-gchar*" />
@@ -1164,6 +1155,51 @@
         </parameters>
       </method>
     </object>
+    <object name="QueryConstraintGroup" cname="MidgardQueryConstraintGroup" parent="GObject">
+      <field name="Priv" cname="priv" type="MidgardQueryConstraintGroupPrivate*" />
+      <virtual_method name="ListConstraints" cname="list_constraints">
+        <return-type type="MidgardQueryConstraintSimple**" />
+        <parameters>
+          <parameter type="MidgardQueryConstraintGroup*" name="self" />
+          <parameter type="guint*" name="n_objects" />
+        </parameters>
+      </virtual_method>
+      <implements>
+        <interface cname="MidgardQueryConstraintSimple" />
+      </implements>
+      <method name="AddConstraint" cname="midgard_query_constraint_group_add_constraint">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="MidgardQueryConstraintSimple*" name="constraint" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </method>
+      <method name="GetGroupType" cname="midgard_query_constraint_group_get_group_type">
+        <return-type type="const-gchar*" />
+      </method>
+      <method name="GetType" cname="midgard_query_constraint_group_get_type" shared="true">
+        <return-type type="GType" />
+      </method>
+      <method name="ListConstraints" cname="midgard_query_constraint_group_list_constraints">
+        <return-type type="MidgardQueryConstraintSimple**" />
+        <parameters>
+          <parameter type="guint*" name="n_objects" />
+        </parameters>
+      </method>
+      <constructor cname="midgard_query_constraint_group_new">
+        <parameters>
+          <parameter type="const-gchar*" name="type" />
+          <parameter type="MidgardQueryConstraintSimple*" name="constraint" />
+          <parameter ellipsis="true" />
+        </parameters>
+      </constructor>
+      <method name="SetGroupType" cname="midgard_query_constraint_group_set_group_type">
+        <return-type type="gboolean" />
+        <parameters>
+          <parameter type="const-gchar*" name="type" />
+        </parameters>
+      </method>
+    </object>
     <object name="QueryExecutor" cname="MidgardQueryExecutor" parent="GObject">
       <field name="Priv" cname="priv" type="MidgardQueryExecutorPrivate*" />
       <property name="" cname="" type="class" />
@@ -1171,7 +1207,7 @@
         <return-type type="gboolean" />
         <parameters>
           <parameter type="MidgardQueryExecutor*" name="self" />
-          <parameter type="MidgardQuerySimpleConstraint*" name="constraint" />
+          <parameter type="MidgardQueryConstraintSimple*" name="constraint" />
         </parameters>
       </virtual_method>
       <virtual_method name="SetLimit" cname="set_limit">
@@ -1250,7 +1286,7 @@
       <method name="SetConstraint" cname="midgard_query_executor_set_constraint">
         <return-type type="gboolean" />
         <parameters>
-          <parameter type="MidgardQuerySimpleConstraint*" name="constraint" />
+          <parameter type="MidgardQueryConstraintSimple*" name="constraint" />
         </parameters>
       </method>
       <method name="SetLimit" cname="midgard_query_executor_set_limit">
@@ -1263,51 +1299,6 @@
         <return-type type="gboolean" />
         <parameters>
           <parameter type="guint" name="offset" />
-        </parameters>
-      </method>
-    </object>
-    <object name="QueryGroupConstraint" cname="MidgardQueryGroupConstraint" parent="GObject">
-      <field name="Priv" cname="priv" type="MidgardQueryGroupConstraintPrivate*" />
-      <virtual_method name="ListConstraints" cname="list_constraints">
-        <return-type type="MidgardQuerySimpleConstraint**" />
-        <parameters>
-          <parameter type="MidgardQueryGroupConstraint*" name="self" />
-          <parameter type="guint*" name="n_objects" />
-        </parameters>
-      </virtual_method>
-      <implements>
-        <interface cname="MidgardQuerySimpleConstraint" />
-      </implements>
-      <method name="AddConstraint" cname="midgard_query_group_constraint_add_constraint">
-        <return-type type="gboolean" />
-        <parameters>
-          <parameter type="MidgardQuerySimpleConstraint*" name="constraint" />
-          <parameter ellipsis="true" />
-        </parameters>
-      </method>
-      <method name="GetGroupType" cname="midgard_query_group_constraint_get_group_type">
-        <return-type type="const-gchar*" />
-      </method>
-      <method name="GetType" cname="midgard_query_group_constraint_get_type" shared="true">
-        <return-type type="GType" />
-      </method>
-      <method name="ListConstraints" cname="midgard_query_group_constraint_list_constraints">
-        <return-type type="MidgardQuerySimpleConstraint**" />
-        <parameters>
-          <parameter type="guint*" name="n_objects" />
-        </parameters>
-      </method>
-      <constructor cname="midgard_query_group_constraint_new">
-        <parameters>
-          <parameter type="const-gchar*" name="type" />
-          <parameter type="MidgardQuerySimpleConstraint*" name="constraint" />
-          <parameter ellipsis="true" />
-        </parameters>
-      </constructor>
-      <method name="SetGroupType" cname="midgard_query_group_constraint_set_group_type">
-        <return-type type="gboolean" />
-        <parameters>
-          <parameter type="const-gchar*" name="type" />
         </parameters>
       </method>
     </object>
@@ -1655,26 +1646,6 @@
       <method name="Close" cname="midgard_close" shared="true">
         <return-type type="void" />
       </method>
-      <method name="CoreConfigBuildPath" cname="midgard_core_config_build_path" shared="true">
-        <return-type type="gchar*" />
-        <parameters>
-          <parameter type="const-gchar**" name="dirs" />
-          <parameter type="const-gchar*" name="filename" />
-          <parameter type="gboolean" name="user" />
-        </parameters>
-      </method>
-      <method name="CoreConfigBuildSchemadirPath" cname="midgard_core_config_build_schemadir_path" shared="true">
-        <return-type type="gchar*" />
-        <parameters>
-          <parameter type="const-gchar*" name="dirname" />
-        </parameters>
-      </method>
-      <method name="CoreConfigBuildViewdirPath" cname="midgard_core_config_build_viewdir_path" shared="true">
-        <return-type type="gchar*" />
-        <parameters>
-          <parameter type="const-gchar*" name="dirname" />
-        </parameters>
-      </method>
       <method name="CoreTimestampSetCurrentTime" cname="midgard_core_timestamp_set_current_time" shared="true">
         <return-type type="void" />
         <parameters>
@@ -1911,7 +1882,6 @@
       </method>
     </object>
     <object name="User" cname="MidgardUser" parent="MidgardDBObject">
-      <field name="Dbpriv" cname="dbpriv" type="MidgardDBObjectPrivate*" />
       <field name="Priv" cname="priv" type="MidgardUserPrivate*" />
       <method name="Auth" cname="midgard_user_auth" shared="true">
         <return-type type="MidgardUser*" />
