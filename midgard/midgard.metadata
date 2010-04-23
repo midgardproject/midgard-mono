@@ -10,12 +10,9 @@
 	<!-- MidgardObject -->
 	<attr path="/api/namespace/object[@cname='MidgardObject']" name="disable_raw_ctor">1</attr> -->
 	<attr path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_get_schema_property']/*/*/*[@name='value']" name="pass_as">out</attr>
-
 	<remove-node path="/api/namespace/object[@cname='MidgardObject']/method[@cname='midgard_object_parent']" />
 
 	<remove-node path="/api/namespace/object[@cname='Midgard']/method[@cname='midgard_set_error']" />
-
-	<!-- <remove-node path="/api/namespace/object[@cname='MidgardReplicator']" /> -->
 
 	<!-- Midgard.QuerySelect -->
 	<attr path="/api/namespace/class[@cname='MidgardQuerySelect']/method[@cname='midgard_query_select_list_objects']/return-type" name="array">1</attr>

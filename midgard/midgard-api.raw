@@ -800,8 +800,7 @@
         </parameters>
       </constructor>
     </object>
-    <object name="Metadata" cname="MidgardMetadata" parent="GObject">
-      <field name="Dbpriv" cname="dbpriv" type="MidgardDBObjectPrivate*" />
+    <object name="Metadata" cname="MidgardMetadata" parent="MidgardDBObject">
       <field name="Priv" cname="priv" type="MidgardMetadataPrivate*" />
       <method name="GetType" cname="midgard_metadata_get_type" shared="true">
         <return-type type="GType" />
@@ -1598,7 +1597,7 @@
         <return-type type="gchar*" />
         <parameters>
           <parameter type="MidgardConnection*" name="mgd" />
-          <parameter type="MidgardObjectClass*" name="klass" />
+          <parameter type="const-gchar*" name="classname" />
           <parameter type="const-gchar*" name="startdate" />
           <parameter type="const-gchar*" name="enddate" />
         </parameters>
